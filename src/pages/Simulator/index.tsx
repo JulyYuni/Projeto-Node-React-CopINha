@@ -1,8 +1,11 @@
-
+import LastResults from "../../components/LastResults";
 
 export default function Simulator(){
 
     return(
-        <h1>Placeholder Simulador</h1>
+        <>
+            <LastResults/>
+            <h1>Placeholder Simulador</h1>
+        </>
     )
 }

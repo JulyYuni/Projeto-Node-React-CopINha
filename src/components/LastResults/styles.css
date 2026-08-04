@@ -1,0 +1,117 @@
+.last-results {
+    width: 100%;
+    background: #002776;
+    padding: 60px 80px;
+}
+
+.last-results-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-results-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumb {
+    margin-bottom: 29px;
+
+    color: #FFD400;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 72px;
+    line-height: 72px;
+
+}
+
+.logo-white {
+    color: #F5F5F5;
+    font-size: 72px;
+}
+
+.logo-yellow {
+    color: #FFD400;
+    font-size: 72px;
+}
+
+.description {
+    color: #8093C5;
+    font-size: 16px;
+}
+
+.result-card {
+    width: 330px;
+
+    background: #132236CC;
+
+    border-radius: 8px;
+
+    padding: 20px 24px;
+}
+
+.card-title {
+    margin-bottom: 22px;
+
+    color: #FFD400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.score-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.team img {
+    width: 24px;
+    height: 24px;
+}
+
+.team span {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.score {
+    text-align: center;
+}
+
+.score h2 {
+    margin: 0;
+
+    color: #FFD400;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.score p {
+    margin-top: 8px;
+
+    color: #8D9AB1;
+    font-size: 13px;
+}

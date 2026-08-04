@@ -1,10 +1,13 @@
-
-
+import LastResults from "../../components/LastResults";
+import GroupClassificationHeader from "../../components/Groups/GroupClassificationHeader";
 export default function Groups(){
 
     return(
-        <h1>Placeholder Grupos</h1>
-
+        <>
+            <LastResults/>
+            <GroupClassificationHeader/> 
+            <h1>Placeholder Grupos</h1>
+        </>
     )
 
 }

@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/header/logo-copinha.svg";
