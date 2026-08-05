@@ -1,0 +1,122 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AcaoLog {
+  CRIACAO
+  EDICAO
+  EXCLUSAO
+}
+
+enum EntidadeLog {
+  TIME
+  JOGO
+  NOTICIA
+  GRUPO
+}
+
+enum StatusJogo {
+  PROXIMO
+  CONCLUIDO
+}
+
+model User {
+  id    String @id @default(uuid())
+  nome  String  
+  email String @unique
+  senha String   
+  logs  LogAdmin[]
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Grupo {
+  id   String @id @default(uuid())
+  nome String 
+
+  times    Time[]
+  jogos    Jogo[]
+
+  createdAt    DateTime @default(now()) @map("created_at")
+  @@map("grupos")
+}
+
+model Time {
+  id       String @id @default(uuid())
+  nome     String
+  sigla    String
+  bandeira String  
+
+  grupoId String
+  grupo   Grupo  @relation(fields: [grupoId], references: [id])
+
+  jogosCasa Jogo[] @relation("TimeCasa")
+  jogosFora Jogo[] @relation("TimeFora")
+
+  vitorias   Int @default(0)
+  empates    Int @default(0)
+  derrotas   Int @default(0)
+  golsPro    Int @default(0)
+  golsContra Int @default(0)
+  saldoGols  Int @default(0)
+  pontos     Int @default(0)
+
+  classificado Boolean @default(false) 
+
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([nome, grupoId]) // evita time duplicado no mesmo grupo
+  @@map("times")
+}
+
+model Jogo {
+  id     String     @id @default(uuid())
+  status StatusJogo @default(PROXIMO)
+
+  grupoId String
+  grupo   Grupo  @relation(fields: [grupoId], references: [id])
+
+  timeIdCasa String
+  timeCasa   Time   @relation("TimeCasa", fields: [timeIdCasa], references: [id])
+
+  timeIdFora String
+  timeFora   Time   @relation("TimeFora", fields: [timeIdFora], references: [id])
+
+  golsCasa Int?
+  golsFora Int?
+
+  data  DateTime
+  local String
+
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([status])   
+  @@index([grupoId])  
+  @@map("jogos")
+}
+
+model LogAdmin {
+  id         String      @id @default(uuid())
+
+  adminId    String
+  admin      User        @relation(fields: [adminId], references: [id])
+  acao       AcaoLog
+  entidade   EntidadeLog
+  entidadeId String?
+  detalhes   Json?
+  criadoEm   DateTime    @default(now())
+}
