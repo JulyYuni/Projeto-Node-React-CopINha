@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 import logo from "../../assets/images/footer/logo-copinha-2026.svg";
 import iconCadeado from "../../assets/images/footer/icon-cadeado.svg";

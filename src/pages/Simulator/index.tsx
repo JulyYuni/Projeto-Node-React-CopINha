@@ -1,5 +1,5 @@
-import UltimoResultado from "../../components/UltimoResultado";
 
+import UltimoResultado from "../../components/UltimoResultado";
 
 export default function Simulator(){
 

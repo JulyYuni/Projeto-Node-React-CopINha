@@ -7,18 +7,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 86px;
+    padding-right: 80px;
+    height: 92px;
 
-    padding: 0 72px;
 }
 
 .logo img{
-    height: 48px;
+    height: 72px;
+    width: 169px;
+
 }
 
 .menu{
     display: flex;
     align-items: center;
     gap: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
 }
 
 .menu-item{
@@ -44,8 +52,9 @@
 }
 
 .menu-item-ativo{
-    background-color: #22C55E;
-    color: white;
+    background: #009C3B;
+    color: #FFFFFF;
+
 }
 
 .noticias-icone,

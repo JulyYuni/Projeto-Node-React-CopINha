@@ -1,12 +1,16 @@
+
 import UltimoResultado from "../../components/UltimoResultado";
+import GroupClassificationHeader from "../../components/Groups/GroupClassificationHeader";
 
 
 export default function Games(){
+    
     return(
         <>
             <UltimoResultado/>
-            <h1>Placeholder Grupos</h1>
+            <GroupClassificationHeader/> 
+            <h1>Placeholder Jogos</h1>
         </>
-    
+
     )
 }
