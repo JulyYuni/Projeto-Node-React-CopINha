@@ -1,0 +1,14 @@
+.title > span{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 2rem;
+    letter-spacing: .0375rem;
+}
+
+
+.mainNew > img{
+    width: 28.75rem;
+    height: 15.375rem;
+}

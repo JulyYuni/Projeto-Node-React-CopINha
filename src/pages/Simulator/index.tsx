@@ -1,8 +1,13 @@
+import UltimoResultado from "../../components/UltimoResultado";
 
 
 export default function Simulator(){
 
     return(
-        <h1>Placeholder Simulador</h1>
+        <>
+            <UltimoResultado/>
+            <h1>Placeholder Grupos</h1>
+        </>
+    
     )
 }

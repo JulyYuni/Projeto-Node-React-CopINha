@@ -1,8 +1,12 @@
+import UltimoResultado from "../../components/UltimoResultado";
 
 
 export default function Games(){
     return(
-        <h1>Placeholder Jogos</h1>
-
+        <>
+            <UltimoResultado/>
+            <h1>Placeholder Grupos</h1>
+        </>
+    
     )
 }
