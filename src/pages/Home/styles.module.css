@@ -1,4 +1,11 @@
-.title > span{
+.newsSection{
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sectionTitle{
     color: #F0F4F8;
     font-family: 'Barlow Condensed';
     font-size: 1.5rem;
@@ -7,8 +14,110 @@
     letter-spacing: .0375rem;
 }
 
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.divider {
+  flex: 1;                    
+  height: 1px;
+  background-color: #FFFFFF7A; 
+}
 
 .mainNew > img{
     width: 28.75rem;
     height: 15.375rem;
+    object-fit: cover;
+}
+.mainNew {
+  position: relative;
+}
+
+.groupBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #FFDF00;
+  color: #002776;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-family: 'Barlow';
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.readTimeBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'DM Mono';
+  font-size: 0.75rem;
+}
+
+.featuredNews{
+    display: flex;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.newsDesc{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.newsTitle{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.0625rem;
+}
+
+.newsSubtitle{
+    color: #8BA3BC;
+    font-family: 'Barlow';
+
+}
+
+.newsInfo{
+    display: flex;
+    gap: 10.1875rem;
+    padding: 125px 42px;
+}
+
+.newsAuthor{
+    color: #8BA3BC;
+    font-family: 'Barlow';
+    font-size:12px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.newsDate{
+    color: #8BA3BC;
+    font-family: 'DM Mono';
+    font-size:12px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.newsIinfo > div{
+    display: flex;
+    align-items: center;
+}
+
+.newsInfo > div > img{
+    padding: .5rem;
+    background-color: #009C3B33;
+    border-radius: 999px;
 }
