@@ -1,0 +1,127 @@
+.featuredNews {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 1rem;
+  background-color: var(--primaryColor);
+}
+
+.mainNew {
+  position: relative;
+}
+
+.mainNew > img {
+  width: 28.75rem;
+  height: 15.375rem;
+  object-fit: cover;
+}
+
+.groupBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #FFDF00;
+  color: #002776;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-family: 'Barlow';
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.readTimeBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #00000080;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'DM Mono';
+  font-size: 0.75rem;
+}
+
+.newsDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .75rem;
+}
+
+.newsTitle {
+  color: #F0F4F8;
+  font-family: 'Barlow Condensed';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.0625rem;
+}
+
+.newsSubtitle {
+  color: #8BA3BC;
+  font-family: 'Barlow';
+  font-size: 0.875rem;
+}
+
+.newsInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsAuthor {
+  color: #8BA3BC;
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.newsDate {
+  color: #8BA3BC;
+  font-family: 'DM Mono';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.newsInfo > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.newsInfo > div > img {
+  padding: .5rem;
+  background-color: #009C3B33;
+  border-radius: 999px;
+}
+
+.small {    
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #132236;
+}
+
+.small .newsDesc{
+    padding: 0px .8125rem;
+    padding-bottom: .8125rem;
+    gap: 1rem;
+}
+
+.small .mainNew > img {
+  width: 100%;
+  height: 12rem;
+}
+
+.small .newsTitle {
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
+.small .newsSubtitle {
+  font-size: 0.8125rem;
+}
