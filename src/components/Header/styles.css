@@ -39,11 +39,13 @@
 
     border-radius: 6px;
 
-    text-decoration: none;
-    color: #B7C4DE;
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 500;
-
+    line-height: 20px;
+    text-align: center;
+    color: #8BA3BC;
+    text-decoration: none;
     transition: .2s;
 }
 
@@ -61,7 +63,7 @@
 .grupos-icone,
 .jogos-icone,
 .simulador-icone{
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }
