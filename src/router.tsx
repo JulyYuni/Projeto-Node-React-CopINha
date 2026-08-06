@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "./RootLayout";
+import RootLayout from "./RootLayout"
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Groups from "./pages/Groups";
@@ -12,7 +12,7 @@ import AdminNews from "./pages/Admin/AdminNews";
 import AdminTeams from "./pages/Admin/AdminTeams";
 import AdminGames from "./pages/Admin/AdminGames";
 import AdminStadiums from "./pages/Admin/AdminStadiums";
-import AdminLayout from "./AdminLayout"
+import AdminLayout from "./pages/Admin/AdminLayout"
 
 
 const router = createBrowserRouter([
@@ -31,31 +31,31 @@ const router = createBrowserRouter([
         element: <Login/>
     },
     {
-        path: "/admin",
+        path: "admin",
         element: <AdminLayout/>,
         children: [
             {
-                path: "/dashboard",
+                path: "dashboard",
                 element: <Dashboard/>
             },
             {
-                path: "/noticias",
+                path: "noticias",
                 element: <AdminNews/>
             },
             {
-                path:"/adminGroups",
+                path:"adminGroups",
                 element: <Admingroups/>
             },
             {
-                path:"/adminTeams",
+                path:"adminTeams",
                 element: <AdminTeams/>
             },
             {
-                path:"/adminJogos",
+                path:"adminJogos",
                 element: <AdminGames/>
             },
             {
-                path:"/adminStadios",
+                path:"adminStadios",
                 element: <AdminStadiums/>
             }
         ]
