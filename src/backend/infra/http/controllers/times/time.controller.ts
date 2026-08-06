@@ -1,6 +1,6 @@
 import type { FastifyReply, FastifyRequest } from "fastify";
-import { createTimeSchema, updateTimeSchema } from "../schemas/time.schema";
-import { makeCreateTimeUseCase, makeDeleteTimeUseCase, makeFindByGroupTimeUseCase, makeFindByIdTimeUseCase, makeUpdateTimeUseCase } from "../../../factories/times.factories";
+import { createTimeSchema, updateTimeSchema } from "../../schemas/time.schema";
+import { makeCreateTimeUseCase, makeDeleteTimeUseCase, makeFindByGroupTimeUseCase, makeFindByIdTimeUseCase, makeUpdateTimeUseCase } from "../../../../factories/times.factories";
 
 export async function createTime(request: FastifyRequest, reply: FastifyReply) {
     const data = createTimeSchema.parse(request.body)

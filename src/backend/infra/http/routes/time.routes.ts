@@ -1,5 +1,5 @@
 import type { FastifyInstance } from "fastify";
-import { createTime, deleteTime, getTimeById, getTimesByGrupo, updateTime } from "../controllers/time.controller";
+import { createTime, deleteTime, getTimeById, getTimesByGrupo, updateTime } from "../controllers/times/time.controller";
 
 export async function timeRoutes(fastify: FastifyInstance) {
   fastify.post('/times', createTime);
