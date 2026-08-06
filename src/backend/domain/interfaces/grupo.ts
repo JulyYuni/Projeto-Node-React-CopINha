@@ -1,8 +1,13 @@
 import type { Jogo } from "./jogo";
 import type { Time } from "./time";
+
 export interface Grupo {
     id: string;
     nome: string;
-    time: Time[];
-    jogo: Jogo[];
+    createdAt: Date;
+}
+
+export interface GrupoComTimesEJogos extends Grupo {
+    times: Time[]
+    jogos: Jogo[]
 }

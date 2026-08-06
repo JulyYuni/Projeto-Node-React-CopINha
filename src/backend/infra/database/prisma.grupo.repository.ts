@@ -1,0 +1,43 @@
+import { prisma } from "../../libs/prisma";
+import { Prisma } from "../../../generated/prisma/client";
+import type { AtualizarGrupoData, CriarGrupoData, GrupoRepository } from "../../domain/repositories/grupo.repository";
+import type { Grupo, GrupoComTimesEJogos } from "../../domain/interfaces/grupo";
+
+export class PrismaGrupoRepository implements GrupoRepository {
+    async create(data: CriarGrupoData): Promise<Grupo>  {
+        const result = await prisma.grupo.create({
+            data: {
+                nome: data.nome
+            }
+        })
+
+        return result;
+    }
+
+    async findById(id: string): Promise<Grupo | null> {
+        return await prisma.grupo.findUnique({ where: { id }})
+    }
+
+    async findByIdComTimesEJogos(id: string): Promise<GrupoComTimesEJogos | null> {
+        return await prisma.grupo.findUnique({
+            where: { id },
+            include: { times: true, jogos: true },
+        });
+    }
+    async update(id: string, data: AtualizarGrupoData): Promise<Grupo> {
+        return await prisma.grupo.update({where: {id}, data})
+    }
+
+    async delete(id: string): Promise<boolean> {
+        try {
+            await prisma.grupo.delete({where: {id}})
+
+            return true;
+        } catch (error) {
+            if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2025') {
+                return false; 
+            }
+            throw error;
+        }
+    }
+}
