@@ -21,7 +21,7 @@
   top: 1rem;
   left: 1rem;
   background-color: #FFDF00;
-  color: #002776;
+  color: #0D1B2A;
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   font-family: 'Barlow';
@@ -49,6 +49,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: .75rem;
+  flex: 1;
+  padding: 16px;
 }
 
 .newsTitle {
@@ -67,6 +69,7 @@
 
 .newsInfo {
   display: flex;
+  margin-top: auto;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -110,6 +113,7 @@
     padding: 0px .8125rem;
     padding-bottom: .8125rem;
     gap: 1rem;
+    flex: 1;
 }
 
 .small .mainNew > img {
@@ -117,6 +121,12 @@
   height: 12rem;
 }
 
+.small .newsInfo > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 0px;
+}
 .small .newsTitle {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -124,4 +134,47 @@
 
 .small .newsSubtitle {
   font-size: 0.8125rem;
+}
+
+.featuredNews.compact {
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #132236;
+  border: 1px solid #FFFFFF14;
+  border-radius: .375rem;
+}
+
+.featuredNews.compact .mainNew > img {
+  width: 100%;
+  height: 12rem;
+}
+
+.featuredNews.compact .newsTitle {
+  color: #F0F4F8;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight:700;
+}
+
+.featuredNews.compact .newsDesc {
+  padding: 0px .8125rem;
+  padding-bottom: .8125rem;
+}
+
+.featuredNews.compact .groupBadge {
+  padding-top: 1rem;
+  background-color: transparent;
+  color:#FFDF00;
+  position: static;    
+  align-self: flex-start;
+  font-family: 'DM Mono';
+  font-weight: 500;
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+.featuredNews.compact .mainNew {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

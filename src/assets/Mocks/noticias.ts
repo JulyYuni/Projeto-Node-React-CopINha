@@ -5,9 +5,9 @@ export type Noticia = {
   grupo: string;
   titulo: string;
   subTitulo: string;
-  corpoDaNoticia?: string;
+  corpoDaNoticia: string;
   autor: string;
-  imagemCapa?: string;
+  imagemCapa: string;
   tempoDeLeitura: string;
   data: string;
 };
@@ -16,8 +16,8 @@ export const noticias: Noticia[] = [
   {
     id: "news-001",
     titulo: "Brasil vence Croácia e abre vantagem no Grupo A",
-    subTitulo: "Em partida eletrizante no Maracanã...",
-    corpoDaNoticia: "A Seleção Brasileira entrou em campo no Maracanã diante de 78 mil torcedores...",
+    subTitulo: "Em partida eletrizante no Maracanã, a Seleção Brasileira derrotou a Croácia por 3×1, com dois gols de Vinicius Jr. e um de Rodrygo.",
+    corpoDaNoticia: "Com seis mudanças em relação à equipe que foi batida pela França na semana passada, a Seleção Brasileira derrotou a Croácia por 3 a 1 na noite desta terça-feira (31), em Orlando (EUA), no último amistoso antes da convocação para a Copa do Mundo. Danilo Santos, Igor Thiago e Gabriel Martinelli fizeram os gols da Amarelinha, que deixou o campo sob aplausos. \nApesar da falta de entrosamento, em razão de uma formação que jamais havia jogado junto, a Seleção Brasileira dominou o adversário, terceiro colocado no Mundial de 2022. Prova disso é que um dos destaques do jogo foi o goleiro Livakovic. Ele evitou pelo menos outros dois gols brasileiros com defesas arrojadas. \nEssa superioridade da Seleção Brasileira foi mais acentuada no primeiro tempo, quando criou várias chances. A primeira, aos 20 minutos, quando Vini Jr aproveitou erro de passe dos croatas e passou a bola para Danilo Santos, que quase fez o gol. Aos 23, Matheus Cunha finalizou sem marcação após cobrança de falta ensaiada, de Danilo Santos. A bola bateu num adversário e saiu rente à trave. \nDepois, aos 35, após boa jogada de Matheus Cunha, João Pedro entrou na área e concluiu com confiança. Mas Livakovic salvou a meta da Croácia",
     autor: "Camila Souza",
     data: "21 de junho de 2026",
     grupo: "B",

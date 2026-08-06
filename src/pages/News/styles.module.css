@@ -1,0 +1,144 @@
+.newsPage{
+    padding: 2rem 6.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.groupBadge {
+  background-color: #FFDF00;
+  color: #0D1B2A;
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  font-family: 'DM Mono';
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.topInfo{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.readTime{
+    color: #8BA3BC;
+    display: flex;
+    font-family: 'DM Mono';
+    font-size: .875rem;
+    font-weight: 400;
+    gap: .375rem;
+}
+
+.title{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 3.75rem;
+}
+
+.subtitle{
+    color: #8BA3BC;
+    font-family: 'Barlow';
+    font-size: 1.125rem;
+    line-height: 1.8281rem;
+    font-weight: 400;
+    padding-left: 1rem;
+    border-left: .125rem solid #FFDF00;
+}
+
+.authorInfo{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2.0625rem;
+    border-bottom: 1px solid #FFFFFF14;
+
+}
+
+.authorInfo > img {
+    padding: .6875rem;
+    background-color: #009C3B33;
+    border-radius: 999px;
+}
+
+.authorInfo > div{
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+    color: #F0F4F8;
+    font-family: 'Barlow';
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.date{
+    color: #8BA3BC;
+    font-family: 'Dm Mono';
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.mainImage{
+    margin-top: 2.0625rem;
+    border-radius: .375rem;
+    height: 30.375rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.paragrafo{
+    color: #F0F4F8E5;
+    font-family: 'Barlow';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+    padding: 1.25rem 0px;
+}
+
+.moreNewsTitle{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.moreNews > div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divider {
+  flex: 1;                    
+  height: 1px;
+  background-color: #FFFFFF14; 
+}
+
+.carouselWrapper {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carouselTrack {
+    overflow: hidden; 
+    width: 100%;
+}
+
+.carouselInner {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 1rem;
+}
+
+.carouselItem {
+    flex: 0 0 calc(33.333% - 1rem); 
+}
