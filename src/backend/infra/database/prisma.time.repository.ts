@@ -1,0 +1,52 @@
+import { prisma } from "../../libs/prisma";
+import type { Time } from "../../domain/interfaces/time";
+import type { AtualizarPontuacaoTimeData, AtualizarTimeData, CriarTimeData, TimeRepository } from "../../domain/repositories/time.repository";
+import { Prisma } from "../../../generated/prisma/client";
+
+export class PrismaTimeRepository implements TimeRepository {
+    async create(data: CriarTimeData): Promise<Time>  {
+        const result = await prisma.time.create({
+            data: {
+                nome: data.nome,
+                sigla: data.sigla,
+                bandeira: data.bandeira,
+                grupoId: data.grupoId,
+                golsPro: data.golsPro,
+                golsContra: data.golsContra,
+                pontos: data.pontos,
+                classificado: data.classificado
+            }
+        })
+
+        return result;
+    }
+
+    async findById(id: string): Promise<Time | null> {
+        return await prisma.time.findUnique({ where: { id }})
+    }
+
+    async findByGroup(grupoId: string): Promise<Time[]> {
+        return await prisma.time.findMany({ where: {grupoId}})
+    }
+
+    async update(id: string, data: AtualizarTimeData): Promise<Time> {
+        return await prisma.time.update({where: {id}, data})
+    }
+
+    async atualizarPontuacao(id: string, data: AtualizarPontuacaoTimeData): Promise<Time> {
+        return await prisma.time.update({where: {id}, data})
+    }
+
+    async delete(id: string): Promise<boolean> {
+        try {
+            await prisma.time.delete({where: {id}})
+
+            return true;
+        } catch (error) {
+            if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2025') {
+                return false; 
+            }
+            throw error;
+        }
+    }
+}

@@ -5,7 +5,7 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  output   = "../src/@types/prisma"
 }
 
 datasource db {
@@ -54,6 +54,7 @@ model Grupo {
 
   times    Time[]
   jogos    Jogo[]
+  noticias Noticia[]
 
   createdAt    DateTime @default(now()) @map("created_at")
   @@map("grupos")
@@ -84,7 +85,7 @@ model Time {
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  @@unique([nome, grupoId]) // evita time duplicado no mesmo grupo
+  @@unique([nome, grupoId]) 
   @@map("times")
 }
 
@@ -115,6 +116,28 @@ model Jogo {
   @@map("jogos")
 }
 
+model Noticia {
+  id             String @id @default(uuid())
+  titulo         String
+  subTitulo      String 
+  corpoDaNoticia String
+  imagemCapa     String 
+
+  tempoDeLeituraMin Int
+
+  autor String
+
+  grupoId String? 
+  grupo   Grupo?  @relation(fields: [grupoId], references: [id])
+
+  publicadoEm  DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
+
+  @@index([publicadoEm]) 
+  @@index([grupoId])     
+  @@map("noticias")
+}
+
 model LogAdmin {
   id         String      @id @default(uuid())
 
@@ -126,3 +149,4 @@ model LogAdmin {
   detalhes   Json?
   criadoEm   DateTime    @default(now())
 }
+

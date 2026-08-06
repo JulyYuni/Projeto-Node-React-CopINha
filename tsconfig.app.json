@@ -10,6 +10,7 @@
     "paths": {
       "@/*": ["./src/backend/*"]
     },
+  
 
     /* Bundler mode */
     "moduleResolution": "bundler",
