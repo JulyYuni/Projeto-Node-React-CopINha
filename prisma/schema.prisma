@@ -30,11 +30,17 @@ enum StatusJogo {
   CONCLUIDO
 }
 
+enum Roles {
+  admin
+  user
+}
+
 model User {
   id    String @id @default(uuid())
   nome  String  
   email String @unique
   senha String   
+  role Roles @default(user)
   logs  LogAdmin[]
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
