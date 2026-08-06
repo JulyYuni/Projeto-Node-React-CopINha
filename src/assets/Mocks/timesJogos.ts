@@ -1,16 +1,8 @@
 // src/data/mockData.ts
 
-import { Group, Team, Game } from "../types/types";
+import type { Group, Team, Game } from "../../utils/types.ts";
 
-import countryFlag from "../assets/TEST/BR.png";
-import croaciaFlag from "../assets/TEST/HR.png";
-import marrocosFlag from "../assets/TEST/MA.png";
-import camaroesFlag from "../assets/TEST/CM.png";
-
-import argentinaFlag from "../assets/TEST/AR.png";
-import mexicoFlag from "../assets/TEST/MX.png";
-import poloniaFlag from "../assets/TEST/PL.png";
-import arabiaFlag from "../assets/TEST/SA.png";
+import countryFlag from "../TEST/BR.png";
 
 
 // =========================
@@ -21,7 +13,7 @@ const brasil: Team = {
     id: 1,
     name: "Brasil",
     abbreviation: "BRA",
-    flag: brasilFlag,
+    flag: countryFlag,
     group: "A",
 
     position: 1,
@@ -44,7 +36,7 @@ const croacia: Team = {
     id: 2,
     name: "Croácia",
     abbreviation: "CRO",
-    flag: croaciaFlag,
+    flag: countryFlag,
     group: "A",
 
     position: 2,
@@ -67,7 +59,7 @@ const marrocos: Team = {
     id: 3,
     name: "Marrocos",
     abbreviation: "MAR",
-    flag: marrocosFlag,
+    flag: countryFlag,
     group: "A",
 
     position: 3,
@@ -90,7 +82,7 @@ const camaroes: Team = {
     id: 4,
     name: "Camarões",
     abbreviation: "CMR",
-    flag: camaroesFlag,
+    flag: countryFlag,
     group: "A",
 
     position: 4,
@@ -232,7 +224,7 @@ const argentina: Team = {
     id: 5,
     name: "Argentina",
     abbreviation: "ARG",
-    flag: argentinaFlag,
+    flag: countryFlag,
     group: "B",
 
     position: 1,
@@ -255,7 +247,7 @@ const mexico: Team = {
     id: 6,
     name: "México",
     abbreviation: "MEX",
-    flag: mexicoFlag,
+    flag: countryFlag,
     group: "B",
 
     position: 2,
@@ -278,7 +270,7 @@ const polonia: Team = {
     id: 7,
     name: "Polônia",
     abbreviation: "POL",
-    flag: poloniaFlag,
+    flag: countryFlag,
     group: "B",
 
     position: 3,
@@ -301,7 +293,7 @@ const arabia: Team = {
     id: 8,
     name: "Arábia Saudita",
     abbreviation: "KSA",
-    flag: arabiaFlag,
+    flag: countryFlag,
     group: "B",
 
     position: 4,
@@ -442,7 +434,7 @@ const franca: Team = {
     id: 9,
     name: "França",
     abbreviation: "FRA",
-    flag: francaFlag,
+    flag: countryFlag,
     group: "C",
     position: 1,
     matches: 0,
@@ -460,7 +452,7 @@ const dinamarca: Team = {
     id: 10,
     name: "Dinamarca",
     abbreviation: "DEN",
-    flag: dinamarcaFlag,
+    flag: countryFlag,
     group: "C",
     position: 2,
     matches: 0,
@@ -478,7 +470,7 @@ const tunisia: Team = {
     id: 11,
     name: "Tunísia",
     abbreviation: "TUN",
-    flag: tunisiaFlag,
+    flag: countryFlag,
     group: "C",
     position: 3,
     matches: 0,
@@ -496,7 +488,7 @@ const australia: Team = {
     id: 12,
     name: "Austrália",
     abbreviation: "AUS",
-    flag: australiaFlag,
+    flag: countryFlag,
     group: "C",
     position: 4,
     matches: 0,
@@ -588,7 +580,7 @@ const portugal: Team = {
     id: 13,
     name: "Portugal",
     abbreviation: "POR",
-    flag: portugalFlag,
+    flag: countryFlag,
     group: "D",
     position: 1,
     matches: 0,
@@ -606,7 +598,7 @@ const uruguai: Team = {
     id: 14,
     name: "Uruguai",
     abbreviation: "URU",
-    flag: uruguaiFlag,
+    flag: countryFlag,
     group: "D",
     position: 2,
     matches: 0,
@@ -624,7 +616,7 @@ const gana: Team = {
     id: 15,
     name: "Gana",
     abbreviation: "GHA",
-    flag: ganaFlag,
+    flag: countryFlag,
     group: "D",
     position: 3,
     matches: 0,
@@ -642,7 +634,7 @@ const coreia: Team = {
     id: 16,
     name: "Coreia do Sul",
     abbreviation: "KOR",
-    flag: coreiaFlag,
+    flag: countryFlag,
     group: "D",
     position: 4,
     matches: 0,
@@ -730,7 +722,7 @@ const espanha: Team = {
     id: 17,
     name: "Espanha",
     abbreviation: "ESP",
-    flag: espanhaFlag,
+    flag: countryFlag,
     group: "E",
     position: 1,
     matches: 0,
@@ -748,7 +740,7 @@ const alemanha: Team = {
     id: 18,
     name: "Alemanha",
     abbreviation: "GER",
-    flag: alemanhaFlag,
+    flag: countryFlag,
     group: "E",
     position: 2,
     matches: 0,
@@ -766,7 +758,7 @@ const japao: Team = {
     id: 19,
     name: "Japão",
     abbreviation: "JPN",
-    flag: japaoFlag,
+    flag: countryFlag,
     group: "E",
     position: 3,
     matches: 0,
@@ -784,7 +776,7 @@ const costaRica: Team = {
     id: 20,
     name: "Costa Rica",
     abbreviation: "CRC",
-    flag: costaRicaFlag,
+    flag: countryFlag,
     group: "E",
     position: 4,
     matches: 0,
@@ -863,3 +855,53 @@ export const groupE: Group = {
     teams: [espanha, alemanha, japao, costaRica],
     games: groupEGames,
 };
+
+// ===========================================
+// LISTA COM TODOS OS GRUPOS
+// ===========================================
+
+export const groups: Group[] = [
+    groupA,
+    groupB,
+    groupC,
+    groupD,
+    groupE,
+];
+
+
+// ===========================================
+// LISTA COM TODOS OS TIMES
+// ===========================================
+
+export const teams: Team[] = groups.flatMap(group => group.teams);
+
+
+// ===========================================
+// LISTA COM TODOS OS JOGOS
+// ===========================================
+
+export const games: Game[] = groups.flatMap(group => group.games);
+
+
+// ===========================================
+// JOGOS ENCERRADOS
+// ===========================================
+
+export const finishedGames: Game[] =
+    games.filter(game => game.status === "finished");
+
+
+// ===========================================
+// PRÓXIMOS JOGOS
+// ===========================================
+
+export const pendingGames: Game[] =
+    games.filter(game => game.status === "pending");
+
+
+// ===========================================
+// ÚLTIMO RESULTADO
+// ===========================================
+
+export const lastResult: Game | undefined =
+    finishedGames[finishedGames.length - 1];

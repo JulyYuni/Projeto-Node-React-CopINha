@@ -24,7 +24,6 @@ export interface Game {
 interface GameCardProps {
     game: Game;
 }
-
 export default function GameCard({ game }: GameCardProps) {
     return (
         <div className={styles.gameCard}>

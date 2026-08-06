@@ -2,6 +2,7 @@
 import UltimoResultado from "../../components/UltimoResultado";
 import GroupClassificationHeader from "../../components/Groups/GroupClassificationHeader";
 import GroupClassificationCard from "../../components/Groups/GroupClassificationCard";
+import styles from "./styles.module.css"
 
 import brasil from "../../assets/TEST/BR.png";
 import croacia from "../../assets/TEST/BR.png";
@@ -338,11 +339,13 @@ export default function Home() {
     <>
         <UltimoResultado/>
         <GroupClassificationHeader/>
-        <GroupClassificationCard groupName="Grupo A" teams={groupA}/>
-        <GroupClassificationCard groupName="Grupo B" teams={groupB}/>
-        <GroupClassificationCard groupName="Grupo C" teams={groupC}/>
-        <GroupClassificationCard groupName="Grupo D" teams={groupD}/>
-        <GroupClassificationCard groupName="Grupo E" teams={groupE}/>
+        <div className={styles.groupsDiv}>
+          <GroupClassificationCard groupName="Grupo A" teams={groupA}/>
+          <GroupClassificationCard groupName="Grupo B" teams={groupB}/>
+          <GroupClassificationCard groupName="Grupo C" teams={groupC}/>
+          <GroupClassificationCard groupName="Grupo D" teams={groupD}/>
+          <GroupClassificationCard groupName="Grupo E" teams={groupE}/>
+        </div>
     </>
     
   );

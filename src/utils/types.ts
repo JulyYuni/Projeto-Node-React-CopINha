@@ -29,22 +29,15 @@ export interface Team {
 
 export interface Game {
     id: number;
-
     group: string;
-
     stadium: string;
     city: string;
-
     date: string;
     time: string;
-
     status: MatchStatus;
-
     prediction: MatchPrediction;
-
     homeTeam: Team;
     awayTeam: Team;
-
     homeScore: number | null;
     awayScore: number | null;
 }

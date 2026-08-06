@@ -1,0 +1,137 @@
+.pendingGameCard {
+    width: 100%;
+    background: #132236;
+    border-radius: 6px;
+    padding: 26px 16px 32px 16px;
+    overflow: hidden;
+}
+
+.pendingGameCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #8B98AA;
+    font-size: 12px;
+}
+
+.pendingGameCardGroup {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.pendingGameCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px; 
+}
+
+.pendingGameCardTeam {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.pendingGameCardFlag {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.pendingGameCardTeamColumn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pendingGameCardName{
+    font-family: 'Barlow Condensed', Arial;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F0F4F8;
+}
+
+.pendingGameCardAbbreviation{
+    font-family: 'Inter', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8BA3BC;
+}
+.pendingGameCardCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.pendingGameCardVs {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFDF00;
+}
+
+.pendingGameCardButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+}
+
+.pendingGameCardButton {
+    width: 123px;
+    height: 52px;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pendingGameCardButton > span:nth-child(1){
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F0F4F8;
+}
+
+.pendingGameCardButton > span:nth-child(2){
+    font-family: 'Inter', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+.pendingGameCardButton:hover {
+    filter: brightness(1.08);
+}
+
+.pendingGameCardButton:active {
+    transform: scale(.98);
+}
+
+.home {
+    background: #009C3B;
+}
+
+.draw {
+    background: #A5AE2B;
+}
+
+.away {
+    background: #351DC0;
+}
+
