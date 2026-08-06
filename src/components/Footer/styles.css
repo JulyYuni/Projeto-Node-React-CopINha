@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     border-top: 1px solid #FFFFFF82;
+    font-family: 'DM Mono', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .footer .footer-container {
@@ -60,4 +64,9 @@
     align-items: center;
     gap: 6px;
     margin-left: 12px;
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
 }

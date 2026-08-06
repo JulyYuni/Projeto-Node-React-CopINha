@@ -1,0 +1,112 @@
+.gameCard {
+    width: 100%;
+    background-color: #17263b;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'DM Mono', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 18px 0px 16px 0px;
+}
+
+.gameCard .gameCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px 18px 18px;
+}
+
+.gameCard .gameCardHeader .gameCardGroup {
+    color: #FFDF00;
+}
+
+.gameCard .gameCardHeader .gameCardCity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gameCard .gameCardHeader .gameCardCity img {
+    width: 16px;
+    height: 16px;
+}
+
+.gameCard .gameCardHeader .gameCardCity span {
+    color: #8BA3BC;
+}
+
+.gameCard .gameCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px 18px 18px;
+}
+
+.gameCard .gameCardContent .gameCardTeam {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gameCard .gameCardContent .gameCardTeam img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.gameCard .gameCardContent .gameCardTeam div {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameCard .gameCardContent .gameCardTeam .gameCardTeamName {
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed', Arial;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.gameCard .gameCardContent .gameCardTeam .gameCardTeamAbbreviation {
+    color: #8BA3BC;
+    font-family: 'Inter', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 2px;
+}
+
+.gameCard .gameCardContent .gameCardScore {
+    color: #FFDF00;
+    font-family: 'Barlow Condensed', Arial;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.gameCard .gameCardFooter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 16px;
+    border-top: 1px solid #FFFFFF3B;
+}
+
+.gameCard .gameCardFooter img {
+    width: 16px;
+    height: 16px;
+    margin-left: 18px;
+}
+
+.gameCard .gameCardFooter span {
+    color: #8a99b2;
+    font-size: 11px;
+    font-family: 'DM Mono', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
