@@ -1,0 +1,223 @@
+.adminGameRow {
+    display: grid;
+    grid-template-columns: 310px 400px 400px 80px;
+    align-items: center;
+    min-height: 61px;
+    padding: 0 24px;
+    background-color: #132236;
+    border-bottom: 1px solid #FFFFFF0A;
+    transition: .2s;
+    font-family: 'DM Mono', Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.adminGameRow:hover {
+    background-color: #1B2D44;
+}
+
+
+.matchColumn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.abbreviation{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.vs {
+    color: #7D8CA6;
+    font-size: 13px;
+    margin: 0 4px;
+}
+
+.group {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #0027764D;
+    color: #8BA3BC;
+    text-transform: uppercase;
+}
+
+.scoreColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.scoreColumn strong {
+    color: #FFD700;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.scoreColumn span {
+    color: #92A3BC;
+    font-size: 13px;
+}
+
+.stadiumColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stadiumColumn span {
+    color: white;
+
+    font-size: 14px;
+}
+
+.stadiumColumn small {
+    color: #7E90A9;
+
+    font-size: 12px;
+}
+
+/* ===========================
+   AÇÕES
+=========================== */
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    transition: .2s;
+}
+
+.iconButton:hover {
+    background-color: #233753;
+}
+
+.iconButton img {
+    width: 16px;
+    height: 16px;
+}
+
+.scoreColumn{
+    max-width: 200px;
+    margin-left: 100px;
+}
+
+.matchColumn select,
+.matchColumn input,
+.scoreColumn select,
+.scoreColumn input,
+.stadiumColumn input {
+    
+    padding: 8px 10px;
+    border: 1px solid #324A69;
+    border-radius: 6px;
+    background-color: #20334B;
+    color: white;
+    font-size: 13px;
+    max-width: 120px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.scoreColumn .homeScore{
+    margin-top: 10px;
+    max-width: 50px;
+    text-align: center;
+}
+
+.scoreColumn .awayScore{
+    margin-bottom: 5px;
+    max-width: 50px;
+    text-align: center;
+}
+
+.scoreColumn .status{
+    margin-bottom: 10px;
+}
+
+.matchColumn select:focus,
+.matchColumn input:focus,
+.scoreColumn select:focus,
+.scoreColumn input:focus,
+.stadiumColumn input:focus {
+    border-color: #3E82F7;
+}
+
+.saveCancelButtonsDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.saveButton,
+.cancelButton {
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.saveButton {
+    background-color: #00A64F;
+
+    color: white;
+}
+
+.saveButton:hover {
+    background-color: #008C42;
+}
+
+.cancelButton {
+    background-color: #44566E;
+
+    color: white;
+}
+
+.cancelButton:hover {
+    background-color: #36465A;
+}

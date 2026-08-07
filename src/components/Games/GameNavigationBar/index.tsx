@@ -1,8 +1,7 @@
 import styles from "./styles.module.css";
 console.log(styles);
 
-
-export type GameFilter = "all" | "finished" | "upcoming";
+export type GameFilter = "all" | "finished" | "pending";
 
 interface GameNavigationBarProps {
     currentFilter: GameFilter;
@@ -30,8 +29,8 @@ export default function GameNavigationBar({
             </button>
 
             <button
-                className={`${styles.gameNavigationBarButton} ${currentFilter === "upcoming" ? styles.active : ""}`}
-                onClick={() => onChangeFilter("upcoming")}
+                className={`${styles.gameNavigationBarButton} ${currentFilter === "pending" ? styles.active : ""}`}
+                onClick={() => onChangeFilter("pending")}
             >
                 Próximos
             </button>

@@ -1,0 +1,30 @@
+.adminGamesTable {
+    width: 100%;
+    background: #162437;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #223247;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 490px 390px 0px 80px;
+    align-items: center;
+    height: 41px;
+    padding: 0 24px;
+    background: #1B2A3F;
+    border-bottom: 1px solid #223247;
+}
+
+.tableHeader div {
+    color: #8BA3BC;
+    font-family: 'DM Mono', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+}

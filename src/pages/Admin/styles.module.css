@@ -1,7 +1,9 @@
-.adminWrapper{
+.adminWrapper {
     display: flex;
+    min-height: 100vh;
 }
 
-.content{
+.content {
     flex: 1;
+    padding: 32px;
 }
