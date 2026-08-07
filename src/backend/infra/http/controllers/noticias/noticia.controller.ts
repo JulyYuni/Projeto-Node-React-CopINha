@@ -24,7 +24,6 @@ const listNoticiasQuerySchema = z.object({
 });
 
 
-
 export class NoticiasController {
 
     async create(request: FastifyRequest, reply: FastifyReply) {
@@ -36,6 +35,7 @@ export class NoticiasController {
 
             return reply.status(201).send(noticia);
         } catch (error) {
+
             return new Error(`Erro algo enviar a requisição ${error}`);
         }
     }
