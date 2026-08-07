@@ -1,10 +1,10 @@
-import { prisma } from "../../libs/prisma";
-import { Prisma } from "../../../generated/prisma/client";
-import type { AtualizarGrupoData, CriarGrupoData, GrupoRepository } from "../../domain/repositories/grupo.repository";
-import type { Grupo, GrupoComTimesEJogos } from "../../domain/interfaces/grupo";
+import { prisma } from "../../../libs/prisma";
+import { Prisma } from "../../../../@types/prisma/client";
+import type { UpdateGrupoData, CreateGrupoData, GrupoRepository } from "../../../domain/repositories/grupo.repository";
+import type { Grupo, GrupoComTimesEJogos } from "../../../domain/interfaces/grupo";
 
 export class PrismaGrupoRepository implements GrupoRepository {
-    async create(data: CriarGrupoData): Promise<Grupo>  {
+    async create(data: CreateGrupoData): Promise<Grupo>  {
         const result = await prisma.grupo.create({
             data: {
                 nome: data.nome
@@ -14,8 +14,18 @@ export class PrismaGrupoRepository implements GrupoRepository {
         return result;
     }
 
+    async findAll(): Promise<Grupo[]> {
+        return await prisma.grupo.findMany({
+            orderBy: { nome: 'asc' },
+        });
+    }
+
     async findById(id: string): Promise<Grupo | null> {
         return await prisma.grupo.findUnique({ where: { id }})
+    }
+
+    async findByNome(nome: string): Promise<Grupo | null> {
+        return await prisma.grupo.findUnique({ where: {nome}})
     }
 
     async findByIdComTimesEJogos(id: string): Promise<GrupoComTimesEJogos | null> {
@@ -24,7 +34,7 @@ export class PrismaGrupoRepository implements GrupoRepository {
             include: { times: true, jogos: true },
         });
     }
-    async update(id: string, data: AtualizarGrupoData): Promise<Grupo> {
+    async update(id: string, data: UpdateGrupoData): Promise<Grupo> {
         return await prisma.grupo.update({where: {id}, data})
     }
 

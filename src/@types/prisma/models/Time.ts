@@ -348,12 +348,12 @@ export type TimeOrderByWithRelationInput = {
 
 export type TimeWhereUniqueInput = Prisma.AtLeast<{
   id?: string
+  nome?: string
+  sigla?: string
   nome_grupoId?: Prisma.TimeNomeGrupoIdCompoundUniqueInput
   AND?: Prisma.TimeWhereInput | Prisma.TimeWhereInput[]
   OR?: Prisma.TimeWhereInput[]
   NOT?: Prisma.TimeWhereInput | Prisma.TimeWhereInput[]
-  nome?: Prisma.StringFilter<"Time"> | string
-  sigla?: Prisma.StringFilter<"Time"> | string
   bandeira?: Prisma.StringFilter<"Time"> | string
   grupoId?: Prisma.StringFilter<"Time"> | string
   vitorias?: Prisma.IntFilter<"Time"> | number
@@ -369,7 +369,7 @@ export type TimeWhereUniqueInput = Prisma.AtLeast<{
   grupo?: Prisma.XOR<Prisma.GrupoScalarRelationFilter, Prisma.GrupoWhereInput>
   jogosCasa?: Prisma.JogoListRelationFilter
   jogosFora?: Prisma.JogoListRelationFilter
-}, "id" | "nome_grupoId">
+}, "id" | "nome" | "sigla" | "nome_grupoId">
 
 export type TimeOrderByWithAggregationInput = {
   id?: Prisma.SortOrder

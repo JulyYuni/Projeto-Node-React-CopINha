@@ -4,6 +4,9 @@ export interface Time {
     sigla: string;
     bandeira: string;
     grupoId: string;
+    vitorias: number;
+    empates: number;
+    derrotas: number;
     golsPro: number;
     golsContra: number;
     pontos: number;

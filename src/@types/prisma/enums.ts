@@ -34,3 +34,11 @@ export const StatusJogo = {
 } as const
 
 export type StatusJogo = (typeof StatusJogo)[keyof typeof StatusJogo]
+
+
+export const Roles = {
+  admin: 'admin',
+  user: 'user'
+} as const
+
+export type Roles = (typeof Roles)[keyof typeof Roles]

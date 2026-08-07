@@ -26,4 +26,4 @@ dist-ssr
 
 build
 .env
-/src/backend/generated/prisma
+/src/backend/@types/prisma

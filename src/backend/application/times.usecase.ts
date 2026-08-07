@@ -1,7 +1,8 @@
-// application/usecases/time/criar-time.usecase.ts
-import type { AtualizarTimeData, TimeRepository } from "../domain/repositories/time.repository";
+import type { UpdateTimeData, TimeRepository } from "../domain/repositories/time.repository";
 import type { Time } from "../domain/interfaces/time";
 import type {GrupoRepository } from "../domain/repositories/grupo.repository";
+import { NotFoundError } from "@/domain/errors/not.found.error";
+import { ConflictError } from "@/domain/errors/conflict.error";
 
 interface CriarTimeInput {
   nome: string;
@@ -12,14 +13,37 @@ interface CriarTimeInput {
 
 export class CreateTimeUseCase {
   private timeRepository: TimeRepository;
+  private grupoRepository: GrupoRepository
 
-  constructor(timeRepository: TimeRepository) {
+  constructor(timeRepository: TimeRepository, grupoRepository: GrupoRepository) {
     this.timeRepository = timeRepository
+    this.grupoRepository = grupoRepository
   }
 
   async execute(input: CriarTimeInput): Promise<Time> {
+    const grupo = await this.grupoRepository.findById(input.grupoId)
+
+    if(!grupo) {
+      throw new NotFoundError('Grupo')
+    }
+
+    const existe = await this.timeRepository.findById(input.nome)
+
+    if(existe) {
+      throw new ConflictError('Já existe time com esse nome')
+    }
+    
+    const timeComSigla = await this.timeRepository.findBySigla(input.sigla);
+    
+    if (timeComSigla) {
+      throw new ConflictError('Já existe um time com essa sigla');
+    }
+
     return this.timeRepository.create({
       ...input,
+      vitorias: 0,
+      empates: 0,
+      derrotas: 0,
       golsPro: 0,
       golsContra: 0,
       pontos: 0,
@@ -39,7 +63,7 @@ export class FindByIdTimeUseCase {
     const time = await this.timeRepository.findById(id);
     
     if(!time) {
-      throw new Error('Time não existe')
+      throw new NotFoundError('Time')
     }
 
     return time;
@@ -59,7 +83,7 @@ export class FindByGroupUseCase {
     const grupo = await this.grupoRepository.findById(grupoId);
 
     if(!grupo) {
-      throw new Error('Não existe grupo')
+      throw new NotFoundError('Grupo')
     }
 
     const times = await this.timeRepository.findByGroup(grupoId);
@@ -75,11 +99,11 @@ export class UpdateTimeUsecase {
     this.timeRepository = timeRepository
   }
 
-  async execute(id: string, data: AtualizarTimeData): Promise<Time> {
+  async execute(id: string, data: UpdateTimeData): Promise<Time> {
     const time = await this.timeRepository.findById(id);
 
     if(!time) {
-      throw new Error('Time nao existe')
+      throw new NotFoundError('Time')
     }
 
     const timeAtualizado = await this.timeRepository.update(id, data)
@@ -98,7 +122,7 @@ export class DeleteTimeUseCase {
       const time = await this.timeRepository.findById(id);
         
       if (!time) {
-        throw new Error('Time nao existe');
+        throw new NotFoundError('Time')
       }
 
       await this.timeRepository.delete(id);
