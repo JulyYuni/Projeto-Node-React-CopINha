@@ -29,6 +29,10 @@ export class PrismaTimeRepository implements TimeRepository {
         return await prisma.time.findMany({ where: {grupoId}})
     }
 
+    async findBySigla(sigla: string): Promise<Time | null> {
+        return await prisma.time.findFirst({ where: { sigla } });
+    }
+    
     async update(id: string, data: AtualizarTimeData): Promise<Time> {
         return await prisma.time.update({where: {id}, data})
     }

@@ -2,6 +2,7 @@ import { ConflictError } from "@/domain/errors/conflict.error";
 import type { Grupo } from "../domain/interfaces/grupo";
 import type { UpdateGrupoData, CreateGrupoData, GrupoRepository } from "../domain/repositories/grupo.repository";
 import { NotFoundError } from "@/domain/errors/not.found.error";
+import type { TimeRepository } from "@/domain/repositories/time.repository";
 
 export class CreateGrupoUseCase {
   private grupoRepository: GrupoRepository;
@@ -74,9 +75,11 @@ export class UpdateGrupoUsecase {
 
 export class DeleteGrupoUseCase {
   private grupoRepository: GrupoRepository
+  private timeRepository: TimeRepository
 
-  constructor(grupoRepository: GrupoRepository) {
+  constructor(grupoRepository: GrupoRepository, timeRepository: TimeRepository) {
     this.grupoRepository = grupoRepository
+    this.timeRepository = timeRepository
   }
 
   async execute(id: string): Promise<boolean> {
@@ -84,6 +87,12 @@ export class DeleteGrupoUseCase {
         
       if (!grupo) {
         throw new NotFoundError('Grupo')
+      }
+
+      const times = await this.timeRepository.findByGroup(id)
+
+      if(times.length > 0) {
+        throw new ConflictError('Não é possivel excluir grupo com times')
       }
 
       await this.grupoRepository.delete(id);

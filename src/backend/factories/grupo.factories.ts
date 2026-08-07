@@ -1,5 +1,6 @@
 import { CreateGrupoUseCase, UpdateGrupoUsecase, FindByIdUseCase, DeleteGrupoUseCase, FindAllGruposUseCase } from "@/application/grupo.usecase";
 import { PrismaGrupoRepository } from "@/infra/database/prisma.grupo.repository";
+import { PrismaTimeRepository } from "@/infra/database/prisma.time.repository";
 
 
 export function makeCreateGrupoUseCase () {
@@ -24,5 +25,6 @@ export function makeUpdateGrupoUseCase() {
 
 export function makeDeleteGrupoUseCase() {
     const grupoRepository = new PrismaGrupoRepository
-    return new DeleteGrupoUseCase(grupoRepository)
+    const timeRepository = new PrismaTimeRepository
+    return new DeleteGrupoUseCase(grupoRepository, timeRepository)
 }

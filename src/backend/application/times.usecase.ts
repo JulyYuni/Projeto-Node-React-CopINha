@@ -32,6 +32,13 @@ export class CreateTimeUseCase {
     if(existe) {
       throw new ConflictError('Já existe time com esse nome')
     }
+    
+    const timeComSigla = await this.timeRepository.findBySigla(input.sigla);
+    
+    if (timeComSigla) {
+      throw new ConflictError('Já existe um time com essa sigla');
+    }
+
     return this.timeRepository.create({
       ...input,
       golsPro: 0,

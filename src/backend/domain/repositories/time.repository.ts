@@ -29,6 +29,7 @@ export interface TimeRepository {
     create(data: CriarTimeData): Promise<Time>;
     findById(id: string): Promise<Time | null>;
     findByGroup(grupoId: string): Promise<Time[]>;
+    findBySigla(sigla: string): Promise<Time | null>
     update(id: string, data: AtualizarTimeData): Promise<Time>;
     atualizarPontuacao(id: string, data: AtualizarPontuacaoTimeData): Promise<Time>
     delete(id: string): Promise<boolean>
