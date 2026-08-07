@@ -15,4 +15,4 @@ export async function jogosRoutes(app: FastifyInstance) {
     app.patch("/:id/resultado", jogosController.lancarResultado);
 
     app.delete("/:id", jogosController.delete);
-}
+}   

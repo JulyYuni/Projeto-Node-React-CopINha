@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@fastify/jwt": "^10.2.1",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.13.3",
     "@types/pg": "^8.20.4",
@@ -52,6 +53,7 @@
     "prisma@7.9.1": true,
     "@prisma/engines@7.9.1": true,
     "bcrypt@6.0.0": true,
-    "esbuild@0.28.1": true
+    "esbuild@0.27.7": true,
+    "@fastify/jwt@10.2.1": true
   }
 }

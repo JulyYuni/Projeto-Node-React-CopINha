@@ -2,30 +2,31 @@ import { makeCreateJogoUseCase, makeDeleteJogoUseCase, makeGetJogoByIdUseCase, m
 import type { FastifyReply, FastifyRequest } from "fastify";
 import type { Prisma } from "../../../../../@types/prisma/browser";
 import z from "zod";
+import type { ListJogosFilters } from "@/domain/repositories/jogo.repository";
 
 
 
 const createJogoBodySchema = z.object({
-    grupoId: z.string().uuid("ID de grupo inválido."),
-    timeIdCasa: z.string().uuid("ID do time da casa inválido."),
-    timeIdFora: z.string().uuid("ID do time visitante inválido."),
-    data: z.coerce.date({ message: "Data inválida." }),
-    local: z.string().min(2, "O local deve ser informado."),
+    grupoId: z.string().uuid(),
+    timeIdCasa: z.string().uuid(),
+    timeIdFora: z.string().uuid(),
+    data: z.coerce.date(),
+    local: z.string().min(2),
 });
 
 const updateJogoBodySchema = createJogoBodySchema.partial();
 
 const lancarResultadoBodySchema = z.object({
-    golsCasa: z.number().int().nonnegative("Gols do time da casa não podem ser negativos."),
-    golsFora: z.number().int().nonnegative("Gols do time visitante não podem ser negativos."),
+    golsCasa: z.number().int().nonnegative(),
+    golsFora: z.number().int().nonnegative(),
 });
 
 const jogoParamsSchema = z.object({
-    id: z.string().uuid("ID de jogo inválido."),
+    id: z.string().uuid(),
 });
 
 const listJogosQuerySchema = z.object({
-    grupoId: z.string().uuid("ID de grupo inválido.").optional(),
+    grupoId: z.string().uuid().optional(),
     status: z.enum(["PROXIMO", "EM_ANDAMENTO", "ENCERRADO"]).optional(),
 });
 
@@ -49,7 +50,7 @@ export class JogosController {
             const filters = listJogosQuerySchema.parse(request.query);
 
             const listJogosUseCase = makeListJogosUseCase();
-            const jogos = await listJogosUseCase.execute();
+            const jogos = await listJogosUseCase.execute(filters as ListJogosFilters);
 
             return reply.status(200).send(jogos);
         } catch (error) {

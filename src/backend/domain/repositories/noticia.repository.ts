@@ -1,7 +1,7 @@
 import type { Noticia, Prisma } from "../../../@types/prisma/client"
 
 export interface NoticiaRepository{
-    create(data: Prisma.NoticiaUncheckedCreateInput): Promise<Noticia>
+    create(data: Prisma.NoticiaCreateInput): Promise<Noticia>
     
     list(): Promise<Noticia[]>
     listByGrupoId(grupoId: string): Promise<Noticia[]>

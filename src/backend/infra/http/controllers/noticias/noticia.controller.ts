@@ -10,7 +10,7 @@ const createNoticiaBodySchema = z.object({
     imagemCapa: z.string().url(),
     tempoDeLeituraMin: z.number().int().positive(),
     autor: z.string(),
-    grupoId: z.string().uuid().nullable().optional(),
+    grupoId: z.string().min(3).optional(),
 });
 
 const updateNoticiaBodySchema = createNoticiaBodySchema.partial();
@@ -20,9 +20,8 @@ const noticiaParamsSchema = z.object({
 });
 
 const listNoticiasQuerySchema = z.object({
-    grupoId: z.string().uuid().optional(),
+    grupoId: z.string().optional(),
 });
-
 
 
 export class NoticiasController {
@@ -36,6 +35,7 @@ export class NoticiasController {
 
             return reply.status(201).send(noticia);
         } catch (error) {
+
             return new Error(`Erro algo enviar a requisição ${error}`);
         }
     }
