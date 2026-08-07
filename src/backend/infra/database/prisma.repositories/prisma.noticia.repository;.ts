@@ -1,7 +1,7 @@
 
 import type { NoticiaRepository } from "@/domain/repositories/noticia.repository";
-import type { NoticiaCreateInput, NoticiaUpdateInput, NoticiaWhereInput } from "../../../@types/prisma/models";
-import type { Noticia } from "../../../@types/prisma/client";
+import type { NoticiaCreateInput, NoticiaUpdateInput, NoticiaWhereInput } from "../../../../@types/prisma/models";
+import type { Noticia } from "../../../../@types/prisma/client";
 import { prisma } from "@/libs/prisma";
 
 

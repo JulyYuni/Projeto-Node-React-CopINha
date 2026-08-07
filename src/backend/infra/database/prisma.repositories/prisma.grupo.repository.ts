@@ -1,7 +1,7 @@
-import { prisma } from "../../libs/prisma";
-import { Prisma } from "../../../@types/prisma/client";
-import type { UpdateGrupoData, CreateGrupoData, GrupoRepository } from "../../domain/repositories/grupo.repository";
-import type { Grupo, GrupoComTimesEJogos } from "../../domain/interfaces/grupo";
+import { prisma } from "../../../libs/prisma";
+import { Prisma } from "../../../../@types/prisma/client";
+import type { UpdateGrupoData, CreateGrupoData, GrupoRepository } from "../../../domain/repositories/grupo.repository";
+import type { Grupo, GrupoComTimesEJogos } from "../../../domain/interfaces/grupo";
 
 export class PrismaGrupoRepository implements GrupoRepository {
     async create(data: CreateGrupoData): Promise<Grupo>  {

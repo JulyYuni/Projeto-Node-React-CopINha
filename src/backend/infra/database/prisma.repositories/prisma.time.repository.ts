@@ -1,10 +1,10 @@
-import { prisma } from "../../libs/prisma";
-import type { Time } from "../../domain/interfaces/time";
-import type { AtualizarPontuacaoTimeData, AtualizarTimeData, CriarTimeData, TimeRepository } from "../../domain/repositories/time.repository";
-import { Prisma } from "../../../@types/prisma/client";
+import { prisma } from "../../../libs/prisma";
+import type { Time } from "../../../domain/interfaces/time";
+import type { UpdateStandingTimeData, UpdateTimeData, CreateTimeData, TimeRepository } from "../../../domain/repositories/time.repository";
+import { Prisma } from "../../../../@types/prisma/client";
 
 export class PrismaTimeRepository implements TimeRepository {
-    async create(data: CriarTimeData): Promise<Time>  {
+    async create(data: CreateTimeData): Promise<Time>  {
         const result = await prisma.time.create({
             data: {
                 nome: data.nome,
@@ -25,6 +25,10 @@ export class PrismaTimeRepository implements TimeRepository {
         return await prisma.time.findUnique({ where: { id }})
     }
 
+    async findAll(): Promise<Time[]> {
+        return await prisma.time.findMany();
+    }
+
     async findByGroup(grupoId: string): Promise<Time[]> {
         return await prisma.time.findMany({ where: {grupoId}})
     }
@@ -33,11 +37,11 @@ export class PrismaTimeRepository implements TimeRepository {
         return await prisma.time.findFirst({ where: { sigla } });
     }
     
-    async update(id: string, data: AtualizarTimeData): Promise<Time> {
+    async update(id: string, data: UpdateTimeData): Promise<Time> {
         return await prisma.time.update({where: {id}, data})
     }
 
-    async atualizarPontuacao(id: string, data: AtualizarPontuacaoTimeData): Promise<Time> {
+    async atualizarPontuacao(id: string, data: UpdateStandingTimeData): Promise<Time> {
         return await prisma.time.update({where: {id}, data})
     }
 

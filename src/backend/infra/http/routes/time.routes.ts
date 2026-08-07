@@ -6,7 +6,7 @@ export async function timeRoutes(fastify: FastifyInstance) {
 
   fastify.get('/times/:id', getTimeById);
 
-  fastify.get('/times/grupo/:groupId', getTimesByGrupo)
+  fastify.get('/times/grupo/:grupoId', getTimesByGrupo)
 
   fastify.put('/times/:id', updateTime,);
 

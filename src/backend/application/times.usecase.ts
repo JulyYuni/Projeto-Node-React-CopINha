@@ -1,4 +1,4 @@
-import type { AtualizarTimeData, TimeRepository } from "../domain/repositories/time.repository";
+import type { UpdateTimeData, TimeRepository } from "../domain/repositories/time.repository";
 import type { Time } from "../domain/interfaces/time";
 import type {GrupoRepository } from "../domain/repositories/grupo.repository";
 import { NotFoundError } from "@/domain/errors/not.found.error";
@@ -41,6 +41,9 @@ export class CreateTimeUseCase {
 
     return this.timeRepository.create({
       ...input,
+      vitorias: 0,
+      empates: 0,
+      derrotas: 0,
       golsPro: 0,
       golsContra: 0,
       pontos: 0,
@@ -96,7 +99,7 @@ export class UpdateTimeUsecase {
     this.timeRepository = timeRepository
   }
 
-  async execute(id: string, data: AtualizarTimeData): Promise<Time> {
+  async execute(id: string, data: UpdateTimeData): Promise<Time> {
     const time = await this.timeRepository.findById(id);
 
     if(!time) {
