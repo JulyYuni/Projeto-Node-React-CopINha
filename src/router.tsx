@@ -36,27 +36,45 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "dashboard",
-                element: <Dashboard/>
+                element: <Dashboard/>,
+                handle:{
+                    title: "Dashboard"
+                }
             },
             {
                 path: "news",
-                element: <AdminNews/>
+                element: <AdminNews/>,
+                handle:{
+                    title: "Notícias"
+                }
             },
             {
                 path:"groups",
-                element: <Admingroups/>
+                element: <Admingroups/>,
+                handle:{
+                    title: "Grupos"
+                }
             },
             {
                 path:"Teams",
-                element: <AdminTeams/>
+                element: <AdminTeams/>,
+                handle:{
+                    title: "Times"
+                }
             },
             {
                 path:"Games",
-                element: <AdminGames/>
+                element: <AdminGames/>,
+                handle:{
+                    title: "Jogos"
+                }
             },
             {
                 path:"Stadiums",
-                element: <AdminStadiums/>
+                element: <AdminStadiums/>,
+                handle:{
+                    title: "Estádios"
+                }
             }
         ]
     }
