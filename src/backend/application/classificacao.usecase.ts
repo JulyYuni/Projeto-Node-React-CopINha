@@ -1,7 +1,7 @@
 import { NotFoundError } from "@/domain/errors/not.found.error";
 import type { GrupoRepository } from "@/domain/repositories/grupo.repository";
 import type { TimeRepository } from "@/domain/repositories/time.repository";
-import { calcularClassificacao } from "@/domain/service/classificacao.calculator";
+import { calcularClassificacao } from "@/domain/service/classificacao.calculator"; //Warning pois o retorno da função está comentado
 
 export class ObterClassificacaoUseCase {
     private grupoRepository: GrupoRepository
