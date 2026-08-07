@@ -1,7 +1,7 @@
 import { prisma } from "../../libs/prisma";
 import type { Time } from "../../domain/interfaces/time";
 import type { AtualizarPontuacaoTimeData, AtualizarTimeData, CriarTimeData, TimeRepository } from "../../domain/repositories/time.repository";
-import { Prisma } from "../../../generated/prisma/client";
+import { Prisma } from "../../../@types/prisma/client";
 
 export class PrismaTimeRepository implements TimeRepository {
     async create(data: CriarTimeData): Promise<Time>  {

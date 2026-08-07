@@ -1,5 +1,5 @@
 import { prisma } from "../../libs/prisma";
-import { Prisma } from "../../../generated/prisma/client";
+import { Prisma } from "../../../@types/prisma/client";
 import type { AtualizarGrupoData, CriarGrupoData, GrupoRepository } from "../../domain/repositories/grupo.repository";
 import type { Grupo, GrupoComTimesEJogos } from "../../domain/interfaces/grupo";
 
