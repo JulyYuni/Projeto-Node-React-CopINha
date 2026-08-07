@@ -21,6 +21,18 @@ export class CreateGrupoUseCase {
   }
 }
 
+export class FindAllGruposUseCase {
+  private grupoRepository: GrupoRepository;
+
+  constructor(grupoRepository: GrupoRepository) {
+    this.grupoRepository = grupoRepository;
+  }
+
+  async execute(): Promise<Grupo[]> {
+    return this.grupoRepository.findAll();
+  }
+}
+
 export class FindByIdUseCase {
   private grupoRepository: GrupoRepository
 

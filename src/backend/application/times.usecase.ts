@@ -13,12 +13,20 @@ interface CriarTimeInput {
 
 export class CreateTimeUseCase {
   private timeRepository: TimeRepository;
+  private grupoRepository: GrupoRepository
 
-  constructor(timeRepository: TimeRepository) {
+  constructor(timeRepository: TimeRepository, grupoRepository: GrupoRepository) {
     this.timeRepository = timeRepository
+    this.grupoRepository = grupoRepository
   }
 
   async execute(input: CriarTimeInput): Promise<Time> {
+    const grupo = await this.grupoRepository.findById(input.grupoId)
+
+    if(!grupo) {
+      throw new NotFoundError('Grupo')
+    }
+
     const existe = await this.timeRepository.findById(input.nome)
 
     if(existe) {

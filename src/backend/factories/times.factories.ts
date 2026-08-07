@@ -4,7 +4,8 @@ import { PrismaTimeRepository } from "../infra/database/prisma.time.repository";
 
 export function makeCreateTimeUseCase () {
     const timeRepository = new PrismaTimeRepository
-    return new CreateTimeUseCase(timeRepository)
+    const grupoRepository = new PrismaGrupoRepository
+    return new CreateTimeUseCase(timeRepository, grupoRepository)
 }
 
 export function makeFindByIdTimeUseCase() {

@@ -1,8 +1,10 @@
 import type { FastifyInstance } from "fastify";
-import { createGrupo, deleteGrupo, getGrupoById, updateGrupo } from "@/infra/http/controllers/grupos/grupo.controller"
+import { createGrupo, deleteGrupo, getAllGrupos, getGrupoById, updateGrupo } from "@/infra/http/controllers/grupos/grupo.controller"
 
-export async function GrupoRoutes(fastify: FastifyInstance) {
+export async function grupoRoutes(fastify: FastifyInstance) {
   fastify.post('/grupo', createGrupo);
+
+  fastify.get('/grupo', getAllGrupos)
 
   fastify.get('/grupo/:id', getGrupoById);
 

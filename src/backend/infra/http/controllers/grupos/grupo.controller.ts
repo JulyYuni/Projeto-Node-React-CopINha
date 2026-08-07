@@ -21,6 +21,23 @@ export async function createGrupo(request: FastifyRequest, reply: FastifyReply) 
   }
 }
 
+import { makeFindAllGruposUseCase } from '@/factories/grupo.factories';
+import { AppError } from '@/domain/errors/app.error';
+
+export async function getAllGrupos(_request: FastifyRequest, reply: FastifyReply) {
+  const useCase = makeFindAllGruposUseCase();
+
+  try {
+    const grupos = await useCase.execute();
+    return reply.status(200).send(grupos);
+  } catch (err) {
+    if (err instanceof AppError) {
+      return reply.status(err.statusCode).send({ message: err.message });
+    }
+    throw err;
+  }
+}
+
 export async function getGrupoById(request: FastifyRequest, reply: FastifyReply) {
   const { id } = request.params as { id: string };
 

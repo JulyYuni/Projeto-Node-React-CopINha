@@ -14,6 +14,12 @@ export class PrismaGrupoRepository implements GrupoRepository {
         return result;
     }
 
+    async findAll(): Promise<Grupo[]> {
+        return await prisma.grupo.findMany({
+            orderBy: { nome: 'asc' },
+        });
+    }
+
     async findById(id: string): Promise<Grupo | null> {
         return await prisma.grupo.findUnique({ where: { id }})
     }
