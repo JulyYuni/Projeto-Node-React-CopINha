@@ -29,7 +29,7 @@ export async function login(request: FastifyRequest, reply: FastifyReply) {
 
     const token = jwt.sign(
         { sub: user.id, email: user.email },
-        "SEGREDO_TEMPORARIO", // troca pra env.JWT_SECRET quando o .env estiver pronto
+        "uaebufabweiajfinawfid", 
         { expiresIn: "8h" }
     )
 
