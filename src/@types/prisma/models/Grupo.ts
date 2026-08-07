@@ -182,15 +182,15 @@ export type GrupoOrderByWithRelationInput = {
 
 export type GrupoWhereUniqueInput = Prisma.AtLeast<{
   id?: string
+  nome?: string
   AND?: Prisma.GrupoWhereInput | Prisma.GrupoWhereInput[]
   OR?: Prisma.GrupoWhereInput[]
   NOT?: Prisma.GrupoWhereInput | Prisma.GrupoWhereInput[]
-  nome?: Prisma.StringFilter<"Grupo"> | string
   createdAt?: Prisma.DateTimeFilter<"Grupo"> | Date | string
   times?: Prisma.TimeListRelationFilter
   jogos?: Prisma.JogoListRelationFilter
   noticias?: Prisma.NoticiaListRelationFilter
-}, "id">
+}, "id" | "nome">
 
 export type GrupoOrderByWithAggregationInput = {
   id?: Prisma.SortOrder

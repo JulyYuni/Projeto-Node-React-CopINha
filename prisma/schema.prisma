@@ -50,7 +50,7 @@ model User {
 
 model Grupo {
   id   String @id @default(uuid())
-  nome String 
+  nome String @unique
 
   times    Time[]
   jogos    Jogo[]
@@ -62,8 +62,8 @@ model Grupo {
 
 model Time {
   id       String @id @default(uuid())
-  nome     String
-  sigla    String
+  nome     String @unique
+  sigla    String @unique
   bandeira String  
 
   grupoId String

@@ -18,6 +18,10 @@ export class PrismaGrupoRepository implements GrupoRepository {
         return await prisma.grupo.findUnique({ where: { id }})
     }
 
+    async findByNome(nome: string): Promise<Grupo | null> {
+        return await prisma.grupo.findUnique({ where: {nome}})
+    }
+
     async findByIdComTimesEJogos(id: string): Promise<GrupoComTimesEJogos | null> {
         return await prisma.grupo.findUnique({
             where: { id },
