@@ -1,0 +1,77 @@
+.groups{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end; 
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.btn{
+    color: #FFFFFF;
+    background-color: #009C3B;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-family: 'Barlow';
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.sheet{
+    width: 49.375rem;
+    background-color: #132236;
+    border: 1px solid #FFFFFF14;
+    border-radius: .375rem;
+}
+
+.sheetHeader{
+    display: flex;
+    gap: 19.25rem;
+    padding: 0rem 1rem;
+    padding-top: .75rem;
+    font-family: 'Dm Mono';
+    font-size: .75rem;
+    line-height: 1rem;
+    color:#FFFFFF;
+}
+
+.sheetGroups{
+    padding: 0px 1rem;
+    padding-top: .75rem;
+}
+
+.sheetRow{
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    border-top: 1px solid #FFFFFF0A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 1rem;
+
+}
+
+.groupName{
+    color: white;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.groupData{
+    color: #FFFFFF;
+    font-family: 'DM mono';
+    font-size: .75rem;
+    font-weight: 400;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.trashIcon{
+    background-color: #132236;
+}
