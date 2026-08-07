@@ -1,5 +1,5 @@
 import type { Grupo } from "../domain/interfaces/grupo";
-import type { AtualizarGrupoData, CriarGrupoData, GrupoRepository } from "../domain/repositories/grupo.repository";
+import type { UpdateGrupoData, CreateGrupoData, GrupoRepository } from "../domain/repositories/grupo.repository";
 
 export class CreateGrupoUseCase {
   private grupoRepository: GrupoRepository;
@@ -8,7 +8,7 @@ export class CreateGrupoUseCase {
     this.grupoRepository = grupoRepository
   }
 
-  async execute(input: CriarGrupoData): Promise<Grupo> {
+  async execute(input: CreateGrupoData): Promise<Grupo> {
     return await this.grupoRepository.create(input)
   }
 }
@@ -39,7 +39,7 @@ export class UpdateGrupoUsecase {
     this.grupoRepository = grupoRepository
   }
 
-  async execute(id: string, data: AtualizarGrupoData): Promise<Grupo> {
+  async execute(id: string, data: UpdateGrupoData): Promise<Grupo> {
     const grupo = await this.grupoRepository.findById(id);
 
     if(!grupo) {

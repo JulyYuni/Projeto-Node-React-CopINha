@@ -1,4 +1,4 @@
-import type { Jogo } from "./jogo";
+import type { Jogos } from "./jogo";
 import type { Time } from "./time";
 
 export interface Grupo {
@@ -9,5 +9,5 @@ export interface Grupo {
 
 export interface GrupoComTimesEJogos extends Grupo {
     times: Time[]
-    jogos: Jogo[]
+    jogos: Jogos[]
 }
