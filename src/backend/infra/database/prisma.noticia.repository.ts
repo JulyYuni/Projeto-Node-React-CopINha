@@ -1,18 +1,17 @@
 
 import type { NoticiaRepository } from "@/domain/repositories/noticia.repository";
-import type { NoticiaCreateInput, NoticiaUpdateInput, NoticiaWhereInput } from "../../../../@types/prisma/models";
-import type { Noticia } from "../../../../@types/prisma/client";
+import type { NoticiaCreateInput, NoticiaUncheckedCreateInput, NoticiaUpdateInput, NoticiaWhereInput } from "../../../@types/prisma/models";
+import type { Noticia } from "../../../@types/prisma/client";
 import { prisma } from "@/libs/prisma";
 
 
 export class PrismaNoticiasRepository implements NoticiaRepository {
-    create(data: NoticiaCreateInput): Promise<Noticia> {
+    create(data: NoticiaUncheckedCreateInput): Promise<Noticia> {
         return prisma.noticia.create({ data })
     }
 
-    list(where: NoticiaWhereInput): Promise<Noticia[]> {
+    list(): Promise<Noticia[]> {
         return prisma.noticia.findMany({
-            where,
             orderBy: { publicadoEm: "desc" },
         })
     }

@@ -1,13 +1,13 @@
-export interface Noticias{
-
-    id: string,
-    titulo: string,
-    subTitulo:  string,
-    corpoDaNoticia: string,
-    imagemCapa: String,
-    tempoDeLeituraMin: number,
-    autor:  string,
-    grupoId:  string,
-    publicadoEm: Date,
-    atualizadoEm:   Date
+export interface Noticia {
+  id: string;
+  titulo: string;
+  subTitulo: string;
+  corpoDaNoticia: string;
+  imagemCapa: string;
+  tempoDeLeituraMin: number;
+  autor: string;
+  grupoId: string | null;
+  publicadoEm: Date;
+  atualizadoEm: Date;
 }
+ 

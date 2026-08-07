@@ -1,12 +1,10 @@
 import type { Noticia, Prisma } from "../../../@types/prisma/client"
-import type { NoticiaWhereInput } from "../../../@types/prisma/models"
 
 export interface NoticiaRepository{
-
-    create(data: Prisma.NoticiaCreateInput): Promise<Noticia>
+    create(data: Prisma.NoticiaUncheckedCreateInput): Promise<Noticia>
     
-    list(where:NoticiaWhereInput): Promise<Noticia[]>
-    listByGrupoId(grupoId: string): Promise<Noticia[]| null>
+    list(): Promise<Noticia[]>
+    listByGrupoId(grupoId: string): Promise<Noticia[]>
     
     getById(id: string): Promise<Noticia | null>
     
