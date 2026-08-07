@@ -110,7 +110,7 @@ const groupAGames: Game[] = [
     {
         id: 1,
 
-        group: "A",
+        group: "Grupo A",
 
         stadium: "Maracanã",
         city: "Rio de Janeiro",
@@ -132,7 +132,7 @@ const groupAGames: Game[] = [
     {
         id: 2,
 
-        group: "A",
+        group: "Grupo A",
 
         stadium: "Arena Fonte Nova",
         city: "Salvador",
@@ -154,7 +154,7 @@ const groupAGames: Game[] = [
     {
         id: 3,
 
-        group: "A",
+        group: "Grupo A",
 
         stadium: "Mineirão",
         city: "Belo Horizonte",
@@ -169,14 +169,14 @@ const groupAGames: Game[] = [
         homeTeam: brasil,
         awayTeam: marrocos,
 
-        homeScore: null,
-        awayScore: null,
+        homeScore: 2,
+        awayScore: 0,
     },
 
     {
         id: 4,
 
-        group: "A",
+        group: "Grupo A",
 
         stadium: "Arena Pernambuco",
         city: "Recife",
@@ -191,8 +191,8 @@ const groupAGames: Game[] = [
         homeTeam: croacia,
         awayTeam: camaroes,
 
-        homeScore: null,
-        awayScore: null,
+        homeScore: 1,
+        awayScore: 2,
     },
 ];
 
@@ -321,7 +321,7 @@ const groupBGames: Game[] = [
     {
         id: 5,
 
-        group: "B",
+        group: "Grupo B",
 
         stadium: "Arena Corinthians",
         city: "São Paulo",
@@ -343,7 +343,7 @@ const groupBGames: Game[] = [
     {
         id: 6,
 
-        group: "B",
+        group: "Grupo B",
 
         stadium: "Beira-Rio",
         city: "Porto Alegre",
@@ -365,7 +365,7 @@ const groupBGames: Game[] = [
     {
         id: 7,
 
-        group: "B",
+        group: "Grupo B",
 
         stadium: "Castelão",
         city: "Fortaleza",
@@ -380,14 +380,14 @@ const groupBGames: Game[] = [
         homeTeam: argentina,
         awayTeam: polonia,
 
-        homeScore: null,
-        awayScore: null,
+        homeScore: 0,
+        awayScore: 0,
     },
 
     {
         id: 8,
 
-        group: "B",
+        group: "Grupo B",
 
         stadium: "Arena da Baixada",
         city: "Curitiba",
@@ -402,8 +402,8 @@ const groupBGames: Game[] = [
         homeTeam: mexico,
         awayTeam: arabia,
 
-        homeScore: null,
-        awayScore: null,
+        homeScore: 1,
+        awayScore: 1,
     },
 ];
 
@@ -509,7 +509,7 @@ const australia: Team = {
 const groupCGames: Game[] = [
     {
         id: 9,
-        group: "C",
+        group: "Grupo C",
         stadium: "Arena Amazônia",
         city: "Manaus",
         date: "20/10/2026",
@@ -523,7 +523,7 @@ const groupCGames: Game[] = [
     },
     {
         id: 10,
-        group: "C",
+        group: "Grupo C",
         stadium: "Arena Pantanal",
         city: "Cuiabá",
         date: "20/10/2026",
@@ -537,7 +537,7 @@ const groupCGames: Game[] = [
     },
     {
         id: 11,
-        group: "C",
+        group: "Grupo C",
         stadium: "Mineirão",
         city: "Belo Horizonte",
         date: "24/10/2026",
@@ -546,12 +546,12 @@ const groupCGames: Game[] = [
         prediction: null,
         homeTeam: franca,
         awayTeam: tunisia,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 1,
+        awayScore: 1,
     },
     {
         id: 12,
-        group: "C",
+        group: "Grupo C",
         stadium: "Maracanã",
         city: "Rio de Janeiro",
         date: "24/10/2026",
@@ -560,8 +560,8 @@ const groupCGames: Game[] = [
         prediction: null,
         homeTeam: dinamarca,
         awayTeam: australia,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 1,
+        awayScore: 1,
     },
 ];
 
@@ -651,7 +651,7 @@ const coreia: Team = {
 const groupDGames: Game[] = [
     {
         id: 13,
-        group: "D",
+        group: "Grupo D",
         stadium: "Arena Fonte Nova",
         city: "Salvador",
         date: "21/10/2026",
@@ -665,7 +665,7 @@ const groupDGames: Game[] = [
     },
     {
         id: 14,
-        group: "D",
+        group: "Grupo D",
         stadium: "Arena Castelão",
         city: "Fortaleza",
         date: "21/10/2026",
@@ -679,7 +679,7 @@ const groupDGames: Game[] = [
     },
     {
         id: 15,
-        group: "D",
+        group: "Grupo D",
         stadium: "Arena Pernambuco",
         city: "Recife",
         date: "25/10/2026",
@@ -688,12 +688,12 @@ const groupDGames: Game[] = [
         prediction: null,
         homeTeam: portugal,
         awayTeam: gana,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 0,
+        awayScore: 1,
     },
     {
         id: 16,
-        group: "D",
+        group: "Grupo D",
         stadium: "Maracanã",
         city: "Rio de Janeiro",
         date: "25/10/2026",
@@ -702,8 +702,8 @@ const groupDGames: Game[] = [
         prediction: null,
         homeTeam: uruguai,
         awayTeam: coreia,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 0,
+        awayScore: 0,
     },
 ];
 
@@ -793,7 +793,7 @@ const costaRica: Team = {
 const groupEGames: Game[] = [
     {
         id: 17,
-        group: "E",
+        group: "Grupo E",
         stadium: "Mineirão",
         city: "Belo Horizonte",
         date: "22/10/2026",
@@ -807,7 +807,7 @@ const groupEGames: Game[] = [
     },
     {
         id: 18,
-        group: "E",
+        group: "Grupo E",
         stadium: "Arena Pantanal",
         city: "Cuiabá",
         date: "22/10/2026",
@@ -821,7 +821,7 @@ const groupEGames: Game[] = [
     },
     {
         id: 19,
-        group: "E",
+        group: "Grupo E",
         stadium: "Maracanã",
         city: "Rio de Janeiro",
         date: "26/10/2026",
@@ -830,12 +830,12 @@ const groupEGames: Game[] = [
         prediction: null,
         homeTeam: espanha,
         awayTeam: japao,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 3,
+        awayScore: 1,
     },
     {
         id: 20,
-        group: "E",
+        group: "Grupo E",
         stadium: "Arena Corinthians",
         city: "São Paulo",
         date: "26/10/2026",
@@ -844,8 +844,8 @@ const groupEGames: Game[] = [
         prediction: null,
         homeTeam: alemanha,
         awayTeam: costaRica,
-        homeScore: null,
-        awayScore: null,
+        homeScore: 2,
+        awayScore: 1,
     },
 ];
 

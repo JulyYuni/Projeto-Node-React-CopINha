@@ -1,25 +1,7 @@
 import styles from "./styles.module.css";
 import locationIcon from "../../../assets/images/games/icon-location.svg";
 
-export interface Game {
-    id: number;
-    finished: boolean;
-    group: string;
-    stadium: string;
-    city: string;
-    homeTeam: {
-        name: string;
-        abbreviation: string;
-        flag: string;
-    };
-    awayTeam: {
-        name: string;
-        abbreviation: string;
-        flag: string;
-    };
-    homeScore: number;
-    awayScore: number;
-}
+import type { Game } from "../../../utils/types.ts";
 
 interface GameCardProps {
     game: Game;
