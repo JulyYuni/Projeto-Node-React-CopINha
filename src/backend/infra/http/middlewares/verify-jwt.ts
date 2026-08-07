@@ -22,7 +22,7 @@ export async function verifyJwt(request: FastifyRequest, reply: FastifyReply) {
 
     try {
         const payload = jwt.verify(token, env.JWT_SECRET) as TokenPayload;
-        request.user = payload;
+        request.body = payload;
     } catch {
         return reply.status(401).send({ error: "Token inválido ou expirado" });
     }

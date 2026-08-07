@@ -1,6 +1,6 @@
 
 import type { NoticiaRepository } from "@/domain/repositories/noticia.repository";
-import type { NoticiaCreateInput, NoticiaUncheckedCreateInput, NoticiaUpdateInput, NoticiaWhereInput } from "../../../@types/prisma/models";
+import type {NoticiaUncheckedCreateInput, NoticiaUpdateInput } from "../../../@types/prisma/models";
 import type { Noticia } from "../../../@types/prisma/client";
 import { prisma } from "@/libs/prisma";
 
