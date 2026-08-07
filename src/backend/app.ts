@@ -1,3 +1,4 @@
+import { classificacaoRoutes } from "./infra/http/routes/classificacao.routes";
 import { grupoRoutes } from "./infra/http/routes/grupo.routes";
 import { appRoutesNoticia } from "./infra/http/routes/noticia.routes";
 import { timeRoutes} from "./infra/http/routes/time.routes";
@@ -8,3 +9,4 @@ export const app = fastify()
 app.register(timeRoutes)
 app.register(grupoRoutes)
 app.register(appRoutesNoticia)
+app.register(classificacaoRoutes)

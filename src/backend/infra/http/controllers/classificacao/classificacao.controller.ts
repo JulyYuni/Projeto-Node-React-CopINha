@@ -1,5 +1,5 @@
-/* import type { FastifyRequest, FastifyReply } from 'fastify';
-import { makeObterClassificacaoUseCase } from '@/factories/classificacao.factories' //Warning pois makeObterClassificacaoUseCase precisa ser implementada
+import type { FastifyRequest, FastifyReply } from 'fastify';
+import { makeObterClassificacaoUseCase } from '@/factories/classificacao.factories'
 import { AppError } from '@/domain/errors/app.error';
 
 export async function getClassificacao(request: FastifyRequest, reply: FastifyReply) {
@@ -16,4 +16,4 @@ export async function getClassificacao(request: FastifyRequest, reply: FastifyRe
     }
     throw err;
   }
-} */
+}
