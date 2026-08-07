@@ -39,23 +39,23 @@ const router = createBrowserRouter([
                 element: <Dashboard/>
             },
             {
-                path: "noticias",
+                path: "news",
                 element: <AdminNews/>
             },
             {
-                path:"adminGroups",
+                path:"groups",
                 element: <Admingroups/>
             },
             {
-                path:"adminTeams",
+                path:"Teams",
                 element: <AdminTeams/>
             },
             {
-                path:"adminJogos",
+                path:"Games",
                 element: <AdminGames/>
             },
             {
-                path:"adminStadios",
+                path:"Stadiums",
                 element: <AdminStadiums/>
             }
         ]

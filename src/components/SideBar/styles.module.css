@@ -1,0 +1,121 @@
+.sidebar{
+    width:270px;
+    height:100vh;
+    background:#002776;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    color: #F0F4F8;
+    padding: 1rem;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #FFFFFF69;
+    gap: 1rem;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.logo > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.copinha{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.adminPannel{
+    color: #FFFFFF;
+    font-family: 'Dm Mono' ;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.userName{
+    font-family: 'Barlow';
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1rem;
+}
+.userEmail{
+    font-family: 'Dm Mono';
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.activeLink{
+    display: flex;
+    justify-content: space-between;
+    background-color: #009C3B;
+    padding: .375rem .875rem;
+    border-radius: .375rem;
+    color: #FFFFFF;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: .875rem;
+    text-decoration: none;
+}
+
+.activeLink > div{
+    display: flex;
+    gap: .375rem;
+}
+
+
+
+.link{
+    display: flex;
+    justify-content: space-between;
+    padding: .375rem .875rem;
+    border:1px solid #FFFFFF78;
+    border-radius: .375rem;
+    color: #FFFFFF;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: .875rem; 
+    text-decoration: none;
+}
+
+.link > div{
+    display: flex;
+    gap: .375rem;
+}
+
+.exitButton{
+    display: flex;
+    gap: .5rem;
+    color:#E85555;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    border-top: 1px solid #FFFFFF69;
+    padding-top: 1.375rem;
+}
