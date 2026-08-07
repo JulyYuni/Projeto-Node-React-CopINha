@@ -1,16 +1,22 @@
 import styles from "./styles.module.css";
 import Lock from "../../assets/icons/lock.png";
+import Logo from "../../components/Logo";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
     <div className={styles.loginPage}>
+      <header className={styles.header}>
+        <Link to={"/"} className={styles.logo}><Logo/></Link>
+      </header>
       <div className={styles.loginCard}>
-        <div className={styles.iconWrapper}>
+        <div className={styles.lock}>
           <img src={Lock} alt="cadeado" />
         </div>
-
-        <h1 className={styles.title}>Acesso restrito</h1>
-        <p className={styles.subtitle}>Painel administrativo · Cop{"{IN}"}ha</p>
+        <div className={styles.info}>
+          <h1 className={styles.title}>Acesso restrito</h1>
+          <p className={styles.subtitle}>Painel administrativo · Cop{"{IN}"}ha</p>
+        </div>
 
         <form className={styles.form}>
           <div className={styles.field}>
@@ -24,6 +30,7 @@ export default function Login() {
           </div>
 
           <button type="submit" className={styles.submitButton}>
+            {/* <img src={Lock} alt="cadeado" /> */}
             Entrar no painel
           </button>
         </form>
