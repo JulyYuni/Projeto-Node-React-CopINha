@@ -31,8 +31,8 @@ enum StatusJogo {
 }
 
 enum Roles {
-  admin
-  user
+  ADMIN
+  USER
 }
 
 model User {
@@ -40,7 +40,7 @@ model User {
   nome  String  
   email String @unique
   senha String   
-  role Roles @default(user)
+  role Roles @default(USER)
   logs  LogAdmin[]
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
