@@ -3,7 +3,7 @@ import { prisma } from "@/libs/prisma.js"
 import type { FastifyReply, FastifyRequest } from "fastify"
 import { compare } from "bcryptjs"
 import jwt from "jsonwebtoken"
-// import { env } from "@/env/index.js" — vamos usar isso pro segredo do JWT depois
+// import { env } from "@/env/index.js" // — vamos usar isso pro segredo do JWT depois
 
 export async function login(request: FastifyRequest, reply: FastifyReply) {
     const loginBodySchema = z.object({
@@ -29,7 +29,7 @@ export async function login(request: FastifyRequest, reply: FastifyReply) {
 
     const token = jwt.sign(
         { sub: user.id, email: user.email },
-        "SEGREDO_TEMPORARIO", // troca pra env.JWT_SECRET quando o .env estiver pronto
+        "uaebufabweiajfinawfid", 
         { expiresIn: "8h" }
     )
 
