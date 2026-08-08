@@ -7,7 +7,7 @@ import AdminHeader from "../../components/AdminHeader";
 export default function AdminLayout() {
   return (
     <div className={styles.adminWrapper}>
-      <Sidebar />
+      <Sidebar/>
       <main className={styles.content}>
         <AdminHeader/>
         <Outlet />
