@@ -1,0 +1,19 @@
+.groupSection {
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+
+    width: 100%;
+
+    margin-bottom: 80px;
+}
+
+.groupSectionGames {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    width: 100%;
+}

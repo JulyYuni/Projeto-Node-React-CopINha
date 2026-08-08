@@ -1,0 +1,101 @@
+.resultContainer{
+    background-color: var(--corPrimaria);
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultLeftSide{
+    display: flex;
+    flex-direction: column;
+    color: #FFDF00;
+    font-family: 'DM Mono';
+    font-size: .75rem;
+}
+
+.logo{
+    font-family: 'Barlow Condensed';    
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 4.5rem;
+}
+
+.logoHero {
+  font-size: 3.5rem;
+  line-height: 1;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;;
+}
+.desc{
+    font-family: 'Barlow';
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #8BA3BC;
+}
+
+.resultRightSide {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #132236CC;
+    border-radius: .375rem;
+    border: 1px solid #FFFFFF14;
+}
+
+.lastResult{
+    color:#FFDF00;
+    font-family: 'DM Mono';
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+.name{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-top: .4rem;
+}
+
+
+.lastScore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: .75rem;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+}
+
+.mainScore {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.score{
+    color:#FFDF00;
+    font-family: 'Barlow Condensed';
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.stadium{
+    color: #8BA3BC;
+    font-family: 'DM Mono';
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin-top: .25rem;
+}

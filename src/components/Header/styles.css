@@ -1,24 +1,26 @@
 
 .header{
     width: 100%;
-    height: 80px;
-    background-color: #0B2F87;
+    background-color: var(--corPrimaria);
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-
-    padding: 0 72px;
+    padding: 0.1rem 5rem;
 }
 
 .logo img{
-    height: 48px;
+    height: 72px;
+    width: 169px;
+
 }
 
 .menu{
     display: flex;
     align-items: center;
     gap: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
 }
 
 .menu-item{
@@ -31,11 +33,13 @@
 
     border-radius: 6px;
 
-    text-decoration: none;
-    color: #B7C4DE;
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 500;
-
+    line-height: 20px;
+    text-align: center;
+    color: #8BA3BC;
+    text-decoration: none;
     transition: .2s;
 }
 
@@ -44,15 +48,16 @@
 }
 
 .menu-item-ativo{
-    background-color: #22C55E;
-    color: white;
+    background: #009C3B;
+    color: #FFFFFF;
+
 }
 
 .noticias-icone,
 .grupos-icone,
 .jogos-icone,
 .simulador-icone{
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }

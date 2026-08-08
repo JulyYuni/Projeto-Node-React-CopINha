@@ -1,0 +1,33 @@
+.newsSection{
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sectionTitle{
+    color: #F0F4F8;
+    font-family: 'Barlow Condensed';
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 2rem;
+    letter-spacing: .0375rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.divider {
+  flex: 1;                    
+  height: 1px;
+  background-color: #FFFFFF7A; 
+}
+
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}

@@ -1,7 +1,8 @@
-import "./index.css";
+import "./styles.css";
 
 import logo from "../../assets/images/footer/logo-copinha-2026.svg";
 import iconCadeado from "../../assets/images/footer/icon-cadeado.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,14 +21,14 @@ export default function Footer() {
 
           <div className="admin-area">
             
-            <a href="#" className="admin-link">
+            <Link to="/login" className="admin-link">
                 <img
                     src={iconCadeado}
                     alt=""
                     className="admin-icon"
                 />
                 <span>Área administrativa</span>
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

@@ -1,0 +1,36 @@
+.gameNavigationBar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    margin-left: 80px;
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.gameNavigationBarButton {
+    padding: 10px 18px;
+    border: 1px solid #FFFFFF14;
+    border-radius: 4px;
+    background-color: #132236;
+    color: #8BA3BC;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.gameNavigationBarButton:hover {
+    background-color: #243652;
+}
+
+.active {
+    background-color: #009C3B;
+    color: #FFFFFF;
+
+}
+
+.active:hover {
+    background-color: #009C3B;
+    color: #FFFFFF;
+}

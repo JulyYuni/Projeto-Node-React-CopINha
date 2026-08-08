@@ -1,0 +1,205 @@
+.groupCard {
+    background: #132236;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.groupCard .groupCardHeader {
+    height: 42px;
+    padding-left: 38px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #002776;
+    font-family: 'Barlow Condensed', Helvetica;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    color: #F0F4F8;
+}
+
+.groupCard .groupCardHeader .groupIcon {
+    width: 16px;
+    height: 20px;
+}
+
+.groupCard .groupTable {
+    width: 100%;
+}
+
+.groupCard .groupTable .headerRow,
+.groupCard .groupTable .tableBody .row {
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: 
+        97px              /* # */
+        minmax(0, 1fr)    /* Seleção */
+        48px              /* J */
+        48px              /* V */
+        48px              /* E */
+        54px              /* D */
+        59px              /* GP */
+        59px              /* GC */
+        73px              /* SG */
+        73px;             /* PTS */
+    
+    column-gap: 8px;
+    padding: 0 44px 0 16px;
+    border-bottom: 1px solid #223247;
+    margin: 0 1px 0 3px;
+}
+
+.groupCard .groupTable .headerRow {
+    height: 32px;
+}
+
+.groupCard .groupTable .headerRow div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8BA3BC;
+}
+
+.groupCard .groupTable .headerRow > div:nth-child(1) {
+    justify-content: flex-start;
+}
+
+.groupCard .groupTable .headerRow > div:nth-child(2) {
+    justify-content: flex-start;
+}
+
+.groupCard .groupTable .headerRow > div:nth-child(10) {
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #F0F4F8;
+    justify-content: flex-end;
+}
+
+
+.groupCard .groupTable .tableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.groupCard .groupTable .tableBody .row {
+    height: 61px;
+    transition: .2s;
+    position: relative;
+}
+
+.groupCard .groupTable .tableBody .row:hover {
+    box-shadow: 
+        0 -1px 0 #009C3B,   /* Borda superior */
+        0 -1px 0 #009C3B;  /* Borda esquerda */
+        
+    border-bottom: 1px solid #009C3B;
+}
+
+.groupCard .groupTable .tableBody .row > div:nth-child(1) {
+    justify-content: flex-start;
+}
+
+.groupCard .groupTable .tableBody .row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #8BA3BC;
+}
+
+.groupCard .groupTable .tableBody .row .teamColumn {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.groupCard .groupTable .tableBody .row .teamColumn img {
+    width: 18px;
+    height: 18px;
+}
+
+.groupCard .groupTable .tableBody .row .teamColumn > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.groupCard .groupTable .tableBody .row .teamColumn h3 {
+    font-family: 'Barlow', Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F0F4F8;
+}
+
+.groupCard .groupTable .tableBody .row .teamColumn span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8BA3BC;
+}
+
+.row.qualified::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -1px;         /* Vai do topo exato até a base exata da linha */
+    width: 2px;        /* A espessura da sua borda verde */
+    background-color: #009C3B;
+    z-index: 2;        /* Garante que ela fique em cima da borda cinza */
+}
+
+.groupCard .groupTable .tableBody .row .positive {
+    color: #009C3B;
+}
+
+.groupCard .groupTable .tableBody .row .negative {
+    color: #E03131;
+}
+
+.groupCard .groupTable .tableBody .row .points {
+    font-family: 'Barlow Condensed', Helvetica;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #F0F4F8;
+    justify-content: flex-end;
+    padding-right: 7px;
+}
+
+.groupCard .qualificationLegend {
+    padding: 8px 8px;
+    font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #8BA3BC;
+}
+
+.groupCard .qualificationLegend::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin-right: 8px;
+    background: #009C3B;
+    vertical-align: middle;
+}

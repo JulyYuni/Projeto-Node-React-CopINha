@@ -1,0 +1,11 @@
+.logo {
+  font-family: 'Barlow Condensed';
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: .025rem;
+  line-height: 1.75rem;
+}
+
+.logoHighlight {
+  color: #FFDF00;
+}

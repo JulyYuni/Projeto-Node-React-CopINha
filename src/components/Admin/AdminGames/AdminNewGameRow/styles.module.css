@@ -1,0 +1,110 @@
+.adminGameRow {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 140px;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    border-top: 1px solid #223247;
+
+    background: #162437;
+
+    gap: 24px;
+}
+
+.matchColumn,
+.scoreColumn,
+.stadiumColumn,
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.matchColumn {
+    flex-wrap: wrap;
+}
+
+.scoreColumn,
+.stadiumColumn {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.matchColumn select,
+.scoreColumn select,
+.scoreColumn input,
+.stadiumColumn input {
+    width: 100%;
+
+    padding: 8px 10px;
+
+    border: 1px solid #32465f;
+    border-radius: 6px;
+
+    background: #1B2A3F;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+.scoreColumn input {
+    width: 70px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.saveButton,
+.cancelButton {
+    border: none;
+    border-radius: 6px;
+
+    padding: 8px 16px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.saveButton {
+    background: #00B348;
+    color: white;
+    min-width: 100px;
+}
+
+.saveButton:hover {
+    background: #00963d;
+}
+
+.cancelButton {
+    background: #C0392B;
+    color: white;
+    min-width: 100px;
+}
+
+.cancelButton:hover {
+    background: #A93226;
+}
+
+.vs {
+    color: #7D8CA6;
+    font-size: 18px;
+    margin: 0 4px;
+    margin-left: 200px;
+}
+
+.x {
+    color: #7D8CA6;
+    font-size: 18px;
+    margin: 0 4px;
+    margin-left: 28px;
+}

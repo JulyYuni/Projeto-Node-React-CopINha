@@ -1,0 +1,30 @@
+.adminGames {
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 32px 0;
+}
+
+.newGameButton{
+    font-family: 'Barlow', Arial;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #009C3B;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    
+    &:hover{
+        background-color: #01a841;
+    }
+}
