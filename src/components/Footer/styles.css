@@ -9,6 +9,9 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
 }
 
 .footer .footer-container {
