@@ -1,12 +1,18 @@
+/* Sidebar/styles.module.css */
 .sidebar{
-    width:270px;
-    height:100vh;
-    background:#002776;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    width: 270px;
+    height: 100vh;
+    background: #002776;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: #F0F4F8;
     padding: 1rem;
+    box-sizing: border-box;
+    position: sticky; 
+    top: 0;             
+    overflow-y: auto;   
+    flex-shrink: 0;      
 }
 
 .infos{
